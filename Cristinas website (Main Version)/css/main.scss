@@ -22,6 +22,10 @@ body {
   font-size: 1em;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 section {
   position: relative;
   display: flex;
@@ -338,23 +342,6 @@ ul li a:hover {
   }
 }
 
-.art-collection-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 25px 0;
-  padding-bottom: 50px;
-}
-
-.collection {
-  background-color: grey;
-  box-sizing: border-box;
-  width: 300px;
-  height: 300px;
-  margin: 10px 1px;
-}
-
 .img-side-left {
   margin: 0 auto;
   position: relative;
@@ -370,7 +357,7 @@ ul li a:hover {
     bottom: 0;
     left: 0;
     width: 375px;
-    height: 650px;
+    height: 600px;
     object-fit: cover;
     transform: rotate(90deg);
     margin: 0 auto;
@@ -548,12 +535,6 @@ ul li a:hover {
   place-items: center;
   height: 50px;
   color: black;
-
-  a {
-    position: relative;
-    color: inherit;
-    top: 153%;
-  }
 }
 
 .tiny-title {
@@ -725,5 +706,23 @@ ul li a:hover {
   .section1 {
     background-image: url(/img/forest-img-large.png);
     background-size: cover;
+  }
+}
+
+//--- COLLECTIONS PAGE START ---//
+
+.collections-wrapper {
+  display: grid;
+  margin: 0 auto;
+  grid-template-rows: 300px;
+  width: 80%;
+
+  .collection-items {
+    padding: 10px;
+    background-color: black;
+
+    &:nth-child(even) {
+      background-color: gray;
+    }
   }
 }

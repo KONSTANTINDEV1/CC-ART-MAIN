@@ -22,6 +22,10 @@ body {
   font-size: 1em;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 section {
   position: relative;
   display: -webkit-box;
@@ -392,32 +396,6 @@ ul li a:hover {
   -webkit-font-smoothing: antialiased;
 }
 
-.art-collection-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 25px 0;
-  padding-bottom: 50px;
-}
-
-.collection {
-  background-color: grey;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 300px;
-  height: 300px;
-  margin: 10px 1px;
-}
-
 .img-side-left {
   margin: 0 auto;
   position: relative;
@@ -441,7 +419,7 @@ ul li a:hover {
   bottom: 0;
   left: 0;
   width: 375px;
-  height: 650px;
+  height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transform: rotate(90deg);
@@ -652,12 +630,6 @@ ul li a:hover {
   color: black;
 }
 
-.discover-more a {
-  position: relative;
-  color: inherit;
-  top: 153%;
-}
-
 .tiny-title {
   position: relative;
   padding: 0 12px;
@@ -848,5 +820,23 @@ ul li a:hover {
     background-image: url(/img/forest-img-large.png);
     background-size: cover;
   }
+}
+
+.collections-wrapper {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  -ms-grid-rows: 300px;
+      grid-template-rows: 300px;
+  width: 80%;
+}
+
+.collections-wrapper .collection-items {
+  padding: 10px;
+  background-color: black;
+}
+
+.collections-wrapper .collection-items:nth-child(even) {
+  background-color: gray;
 }
 /*# sourceMappingURL=main.css.map */

@@ -56,7 +56,7 @@ function pageTransition() {
     width: "100%",
     left: "-100%",
     ease: "Expo.easeInOut",
-    delay: 0.3,
+    delay: 0.8,
   });
   tl.set(".loading-screen", { left: "-100%" });
 }
@@ -89,79 +89,83 @@ barba.init({
   ],
 });
 
-  //--- CAROUSEL ---//
+//--- CAROUSEL ---//
 
-  //-- Initialize Swiper
+//-- Initialize Swiper
 
-  var swiper = new Swiper(".s1", {
-    loop: false,
-    grabCursor: true,
-    spaceBetween: 100,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
+var swiper = new Swiper(".s1", {
+  loop: false,
+  grabCursor: true,
+  spaceBetween: 100,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 30,
     },
-    // Responsive breakpoints
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 40,
-      },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 40,
     },
-  });
+  },
+});
 
-  var swiper2 = new Swiper(".s2", {
-    zoom: {
-      maxRatio: 5,
-    },
-    grabCursor: true,
-    freeMode: true,
-    centerSlides: false,
-    centeredSlidesBounds: true,
-    // autoplay: true,
-    waitForTransition: true,
-    followFinger: true,
+var swiper2 = new Swiper(".s2", {
+  zoom: {
+    maxRatio: 5,
+  },
+  grabCursor: true,
+  freeMode: true,
+  centerSlides: false,
+  centeredSlidesBounds: true,
+  // autoplay: true,
+  waitForTransition: true,
+  followFinger: true,
 
-    // Responsive breakpoints
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: "auto",
-        spaceBetween: 20,
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        autoResize: true,
-      },
-      // when window width is >= 640px
-      740: {
-        slidesPerView: "auto",
-        spaceBetween: 40,
-      },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
     },
-  });
+    // when window width is >= 480px
+    480: {
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      autoResize: true,
+    },
+    // when window width is >= 640px
+    740: {
+      slidesPerView: "auto",
+      spaceBetween: 40,
+    },
+  },
+});
+
 
 barba.hooks.beforeEnter((data) => {
   // this hook will be called during every transitions
   // before new page content enter…
-
+  
+  $(document).ready(function () {
+    $(this).scrollTop(0);
+  });
   $(document).ready(function () {
     $(".sidebarBtn").click(function () {
       $(".sidebar").toggleClass("active");
