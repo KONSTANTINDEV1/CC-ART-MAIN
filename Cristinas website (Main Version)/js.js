@@ -111,16 +111,19 @@ var swiper = new Swiper(".s1", {
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
+      autoResize: true,
     },
     // when window width is >= 480px
     480: {
       slidesPerView: 1,
       spaceBetween: 30,
+      autoResize: true,
     },
     // when window width is >= 640px
     640: {
       slidesPerView: 1,
       spaceBetween: 40,
+      autoResize: true,
     },
   },
 });
@@ -143,6 +146,7 @@ var swiper2 = new Swiper(".s2", {
     320: {
       slidesPerView: "auto",
       spaceBetween: 20,
+      autoResize: true,
     },
     // when window width is >= 480px
     480: {
@@ -154,6 +158,7 @@ var swiper2 = new Swiper(".s2", {
     740: {
       slidesPerView: "auto",
       spaceBetween: 40,
+      autoResize: true,
     },
   },
 });
@@ -162,7 +167,7 @@ var swiper2 = new Swiper(".s2", {
 barba.hooks.beforeEnter((data) => {
   // this hook will be called during every transitions
   // before new page content enter…
-  
+
   $(document).ready(function () {
     $(this).scrollTop(0);
   });
@@ -205,16 +210,20 @@ barba.hooks.beforeEnter((data) => {
       320: {
         slidesPerView: 1,
         spaceBetween: 20,
+        autoResize: true,
       },
       // when window width is >= 480px
       480: {
         slidesPerView: 1,
         spaceBetween: 30,
+        autoResize: true,
       },
       // when window width is >= 640px
       640: {
         slidesPerView: 1,
         spaceBetween: 40,
+        autoResize: true,
+        
       },
     },
   });

@@ -15,13 +15,14 @@
     <title>CC ART</title>
     <link rel="stylesheet" href="../css/main.css" />
   </head>
-
+  <!-- LOADING SCREEN START-->
   <body data-barba="wrapper">
     <div class="load-container">
       <div class="loading-screen"></div>
     </div>
+    <!-- LOADING SCREEN END-->
     <main data-barba="container" data-barba-namespace="collection-section">
-     <!-- REMEMBER TO CHANGE THIS ID TO COLLECTIONS-->
+      <!-- REMEMBER TO CHANGE THIS ID TO COLLECTIONS-->
       <section id="about-page" class="section">
         <header>
           <nav class="navbar">
@@ -36,7 +37,9 @@
                 <li><a href="../pages/about.html">ABOUT US</a></li>
                 <li><a href="../pages/onsale.html">ON SALE</a></li>
                 <li><a href="../pages/newpaintings.html">NEW PAINTINGS</a></li>
-                <li><a href="../pages/exhibitionwork.html">EXHIBITON WORK</a></li>
+                <li>
+                  <a href="../pages/exhibitionwork.html">EXHIBITON WORK</a>
+                </li>
                 <li><a href="../pages/projects.html">CURRENT PROJECTS</a></li>
                 <li><a href="../pages/contact.html">CONTACT</a></li>
                 <div class="socials-nav">
@@ -54,12 +57,60 @@
           </nav>
         </header>
         <main>
-          <div class="collections-wrapper">
-            <div class="collection-items"></div>
-            <div class="collection-items"></div>
-            <div class="collection-items"></div>
-            <div class="collection-items"></div>
+          <div class="collections-page-text text-wrapper">
+            <h2>Camelia Creative</h2>
+            <h1>COLLECTIONS</h1>
+            <p>
+              Cristina’s Collectios is a new take on the themes of nature,
+              materials, and craftsmanship, evoking a bygone era. It has
+              reinvented new classics for the digital age. Primitive art,
+              brutalist architecture, artist Costantino Nivola’s sand casting
+              technique, raw earth and plastic arts become the starting point
+              for designs with accentuated textures. Basket weaving and wicker
+              chairs, a statement of craftsmanship that peaked in popularity in
+              the 1970s, is combined with marble, textiles, and marbling for a
+              more modern look. Nature makes an appearance through suffused,
+              faint, and fluid landscapes, plants, enormous flowers, and the use
+              of natural wood and stone. The collection experiments with light
+              to create fascinating, changeable reflections and refractions
+              within the spaces.
+            </p>
           </div>
+          <div class="collections-wrapper">
+            <div class="collection-items">
+              <a href=""><img class="zoom-img" src="/img/Adjustments19.jpg" alt=""></a> 
+              <h2>CATS</h2>
+            </div>
+            <div class="collection-items">
+              <a href=""><img src="/img/Adjustments19.jpg" alt=""></a> 
+              <h2>PEOPLE</h2>
+            </div>
+            <div class="collection-items">
+              <a href=""><img src="/img/Adjustments19.jpg" alt=""></a> 
+              <h2>PORTRAITS</h2>
+            </div>
+            <div class="collection-items">
+              <a href=""><img src="/img/Adjustments19.jpg" alt=""></a> 
+              <h2>FLOWERS</h2>
+            </div>
+            <div class="collection-items">
+              <a href=""><img src="/img/Adjustments19.jpg" alt=""></a> 
+              <h2>BOTTLES</h2>
+            </div>
+            <div class="collection-items">
+              <a href=""><img src="/img/Adjustments19.jpg" alt=""></a> 
+              <h2>LANDSCAPES</h2>
+            </div>
+            </div>
+          </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- <div class="collections-wrapper">
+            <div class="collection-items"><img src="/img/Adjustments19.jpg" alt=""></div>
+            <div class="collection-items"><h3>CAT COLLECTION</h3><p>cat</p></div>
+           
+          </div> -->
           <!-- Slider main container -->
           <div class="swiper-container s1">
             <!-- Additional required wrapper -->
@@ -238,14 +289,14 @@
         </div>
       </footer>
     </main>
-      <!-- JS LIBRARIES -->
-      <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
-        integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
-        crossorigin="anonymous"
-      ></script>
-      <script src="../js.js"></script>
+    <!-- JS LIBRARIES -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
+      integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js.js"></script>
   </body>
 </html>
