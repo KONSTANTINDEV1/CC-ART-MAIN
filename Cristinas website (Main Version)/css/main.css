@@ -14,6 +14,7 @@
 
 html,
 body {
+  position: relative;
   min-height: 100vh;
   margin: 0 auto;
   min-width: 100vw;
@@ -61,7 +62,7 @@ section {
 
 .logo,
 .logo-topnav {
-  width: 110px;
+  width: 125px;
   display: none;
 }
 
@@ -102,7 +103,7 @@ nav.sticky .menu-icon span {
   display: grid;
   place-items: center;
   position: relative;
-  top: 2px;
+  top: 8px;
   z-index: 100;
   height: 55px;
   width: 50px;
@@ -360,6 +361,12 @@ ul li a:hover {
   padding-right: 10%;
 }
 
+@media only screen and (min-width: 1400px) {
+  .text-wrapper {
+    padding: 0 25%;
+  }
+}
+
 .about-img {
   min-width: 100vw;
   max-height: 500px;
@@ -402,9 +409,9 @@ ul li a:hover {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   place-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -412,19 +419,23 @@ ul li a:hover {
           flex-direction: row;
   width: 100%;
   height: 400px;
+  overflow: hidden;
+  padding: 5%;
+  margin: 70px 0;
 }
 
 .img-side-left img {
   position: relative;
   bottom: 0;
   left: 0;
-  width: 375px;
-  height: 600px;
+  max-width: 100%;
+  height: 550px;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   margin: 0 auto;
+  border: 4px solid rgba(245, 242, 242, 0.776);
 }
 
 .img-side-left h4 {
@@ -441,7 +452,7 @@ ul li a:hover {
   padding-bottom: 60px;
   place-items: center;
   width: 100%;
-  height: 100px;
+  height: 100%;
   z-index: 10;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -449,6 +460,41 @@ ul li a:hover {
   right: 0%;
   font-size: 15px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-side-left {
+    padding: 0%;
+    margin: 0px 0px;
+  }
+  .img-side-left h4 {
+    right: 5%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .img-side-left h4 {
+    right: 250px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .img-side-left {
+    padding: 0;
+  }
+  .img-side-left img {
+    max-width: 100%;
+    height: 750px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    margin: 0 auto;
+  }
+  .img-side-left h4 {
+    right: 120px;
+    right: 280px;
+  }
 }
 
 .collections h1 {
@@ -460,7 +506,6 @@ ul li a:hover {
 
 .collections p {
   font-family: "Montserrat", sans-serif;
-  -webkit-font-smoothing: antialiased;
   font-weight: 600;
   padding: 16px 0;
   font-size: 18px;
@@ -482,6 +527,7 @@ ul li a:hover {
           align-items: center;
   line-height: 1;
   padding: 40px 0;
+  padding-bottom: 120px;
 }
 
 .explore-container .line {
@@ -556,12 +602,12 @@ ul li a:hover {
 }
 
 .slide1 {
-  background-image: url(/img/Adjustments21.jpg);
+  background-image: url(/img/Cats.jpeg);
   background-size: cover;
 }
 
 .slide2 {
-  background-image: url(/img/Adjustments19.jpg);
+  background-image: url(/img/Landscape2.jpeg);
   background-size: cover;
 }
 
@@ -571,7 +617,7 @@ ul li a:hover {
 }
 
 .slide4 {
-  background-image: url(/img/Adjustments18.jpeg);
+  background-image: url(/img/People2.jpeg);
   background-size: cover;
 }
 
@@ -669,9 +715,13 @@ ul li a:hover {
 }
 
 .s2 .swiper-slide {
+  position: relative;
   width: 80%;
   height: 100%;
   background-size: cover;
+  text-align: center;
+  margin-bottom: 50px;
+  border: 4px solid rgba(245, 242, 242, 0.776);
 }
 
 .s2 .swiper-slide h1 {
@@ -685,6 +735,34 @@ ul li a:hover {
   position: relative;
   top: 110%;
   pointer-events: none;
+}
+
+.s2 .swiper-slide h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 3px;
+  padding: 20px;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.s2 .swiper-slide hr {
+  border: 1px solid black;
+  width: 30px;
+  margin-top: 6px;
 }
 
 .s2 .swiper-slide .zoom-img {
@@ -730,7 +808,7 @@ ul li a:hover {
 .footer-container {
   background-color: black;
   color: gray;
-  padding: 0 15%;
+  padding: 0 10%;
 }
 
 .footer-container padding-left h1 {
@@ -738,6 +816,10 @@ ul li a:hover {
   padding-bottom: 20px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
+}
+
+.footer-container h1 {
+  padding-top: 50px;
 }
 
 .footer-container a {
@@ -749,7 +831,7 @@ ul li a:hover {
   display: -ms-flexbox;
   display: flex;
   height: 500px;
-  width: 100%;
+  width: 80%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -769,8 +851,8 @@ ul li a:hover {
 }
 
 .footerlinks-container li {
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: color 0.8s ease;
+  transition: color 0.8s ease;
 }
 
 .footerlinks-container li:hover {
@@ -783,7 +865,10 @@ ul li a:hover {
 }
 
 .footerlinks-container .copyright {
-  color: white;
+  color: gray;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .footer-links1,
@@ -801,14 +886,24 @@ ul li a:hover {
   padding-top: 5px;
 }
 
+.footer-links-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
 #about-page {
-  padding-top: 60px;
+  padding-top: 70px;
 }
 
 #about-page .navbar {
   position: fixed;
   background-color: white;
-  margin-top: -60px;
+  margin-top: -70px;
 }
 
 #about-page .logo-topnav {
@@ -834,11 +929,13 @@ ul li a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 50px;
+  margin-right: 10%;
+  margin-left: 10%;
   width: 100%;
 }
 
 .collections-page-text h2 {
-  font-size: 45px;
+  font-size: 50px;
   letter-spacing: 2px;
   font-family: "Lato", sans-serif;
   padding-bottom: 15px;
@@ -853,8 +950,24 @@ ul li a:hover {
 
 .collections-page-text p {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-size: 15px;
   line-height: 1.7;
+}
+
+@media only screen and (min-width: 1400px) {
+  .collections-page-text {
+    padding-right: 50%;
+    padding-bottom: 60px;
+    padding-top: 50px;
+  }
+  .collections-page-text h1 {
+    padding-top: 10px;
+  }
+  .collections-page-text p {
+    padding-top: 20px;
+  }
 }
 
 .collections-wrapper {
@@ -875,6 +988,12 @@ ul li a:hover {
   width: 80%;
 }
 
+@media only screen and (max-width: 600px) {
+  .collections-wrapper {
+    padding-bottom: 400px;
+  }
+}
+
 .collections-wrapper .collection-items {
   position: relative;
   display: -webkit-box;
@@ -888,12 +1007,18 @@ ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: black;
-  margin-bottom: 100px;
+  border: 4px solid rgba(245, 242, 242, 0.776);
+  margin-bottom: 50px;
   height: 320px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 300px;
           flex: 1 1 300px;
+}
+
+.collections-wrapper .collection-items .overflow {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .collections-wrapper .collection-items h2 {
@@ -902,7 +1027,7 @@ ul li a:hover {
   left: 0;
   letter-spacing: 3px;
   padding: 16px 0;
-  font-size: 16px;
+  font-size: 13px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   width: 100%;
@@ -918,5 +1043,21 @@ ul li a:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 10s ease;
+  transition: -webkit-transform 10s ease;
+  transition: transform 10s ease;
+  transition: transform 10s ease, -webkit-transform 10s ease;
+}
+
+.collections-wrapper .collection-items img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media only screen and (min-width: 1400px) {
+  .collections-wrapper .collection-items {
+    margin-bottom: 90px;
+    margin-right: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
