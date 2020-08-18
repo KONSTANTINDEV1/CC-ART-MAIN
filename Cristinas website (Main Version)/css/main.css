@@ -880,14 +880,11 @@ ul a:hover {
   width: 100vw;
 }
 
-.footer-container padding-left h1 {
+.footer-container h1 {
   padding-top: 40px;
   padding-bottom: 20px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-}
-
-.footer-container h1 {
   padding-top: 50px;
   width: 100vw;
 }
@@ -927,6 +924,11 @@ ul a:hover {
 
 .footerlinks-container li:hover {
   color: white;
+}
+
+.footerlinks-container a {
+  padding: 0;
+  margin: 0;
 }
 
 .footerlinks-container h3 {
@@ -1166,6 +1168,7 @@ ul a:hover {
   position: relative;
   width: 100vw;
   height: auto;
+  margin-bottom: 200px;
 }
 
 .bottles-img-main img {
