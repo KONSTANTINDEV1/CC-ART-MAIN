@@ -70,6 +70,8 @@ section {
 .logo-topnav {
   width: 125px;
   display: none;
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
 }
 
 .sticky {
@@ -212,6 +214,8 @@ nav.sticky .menu-icon span {
   display: block;
   width: 100%;
   height: 150px;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
 }
 
 ul {
@@ -351,7 +355,7 @@ ul li a:hover {
 }
 
 .gallery-img-container {
-  width: 100%;
+  width: 100vw;
   height: auto;
 }
 
@@ -363,8 +367,8 @@ ul li a:hover {
 }
 
 .text-wrapper {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 9%;
+  padding-right: 9%;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -379,7 +383,8 @@ ul li a:hover {
 }
 
 .about-text-container {
-  padding-top: 40px;
+  width: 100vw;
+  padding: 50px 10%;
 }
 
 .about-text-container h1 {
@@ -421,7 +426,7 @@ ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
+  width: 100vw;
   height: 400px;
   overflow: hidden;
   padding: 5%;
@@ -501,6 +506,10 @@ ul li a:hover {
   }
 }
 
+.collections {
+  width: 100vw;
+}
+
 .collections h1 {
   font-size: 30px;
   letter-spacing: 3px;
@@ -518,6 +527,12 @@ ul li a:hover {
 
 .projects {
   margin-top: -150px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .projects {
+    margin-top: -60px;
+  }
 }
 
 .explore-container {
@@ -813,6 +828,7 @@ ul li a:hover {
   background-color: black;
   color: gray;
   padding: 0 10%;
+  width: 100vw;
 }
 
 .footer-container padding-left h1 {
@@ -824,6 +840,7 @@ ul li a:hover {
 
 .footer-container h1 {
   padding-top: 50px;
+  width: 100vw;
 }
 
 .footer-container a {
@@ -933,9 +950,7 @@ ul li a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 50px;
-  margin-right: 10%;
-  margin-left: 10%;
-  width: 100%;
+  width: 100vw;
 }
 
 .collections-page-text h2 {
@@ -959,9 +974,10 @@ ul li a:hover {
   line-height: 1.7;
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1000px) {
   .collections-page-text {
-    padding-right: 50%;
+    margin-right: 50%;
+    padding: 0 10%;
     padding-bottom: 60px;
     padding-top: 50px;
   }
@@ -986,7 +1002,7 @@ ul li a:hover {
   grid-auto-rows: minmax(200px, 3fr);
   grid-gap: 3%;
   margin: 0 auto;
-  padding-bottom: 100px;
+  padding-bottom: 35px;
   padding-top: 50px;
   width: 80%;
 }
@@ -1062,5 +1078,39 @@ ul li a:hover {
     margin-bottom: 90px;
     margin-right: 20px;
   }
+}
+
+.bottles-img-main {
+  position: relative;
+  width: 100vw;
+  height: auto;
+}
+
+.bottles-img-main img {
+  width: 100%;
+  padding: 2% 25%;
+  padding-bottom: 5%;
+}
+
+@media only screen and (max-width: 900px) {
+  .bottles-img-main img {
+    padding: 0;
+  }
+}
+
+.bottles-img-main h1 {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  top: 460px;
+  left: 380px;
+}
+
+.bottles-img-main h2 {
+  position: relative;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: 500px;
+  top: 460px;
 }
 /*# sourceMappingURL=main.css.map */

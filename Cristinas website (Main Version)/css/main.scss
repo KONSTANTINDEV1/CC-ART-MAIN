@@ -61,6 +61,7 @@ section {
 .logo-topnav {
   width: 125px;
   display: none;
+  transition: 2s ease-out;
 }
 
 .sticky {
@@ -185,6 +186,7 @@ nav.sticky .menu-icon span {
   display: block;
   width: 100%;
   height: 150px;
+  transition: 1s ease-out;
 }
 
 ul {
@@ -299,7 +301,7 @@ ul li a:hover {
   }
 }
 .gallery-img-container {
-  width: 100%;
+  width: 100vw;
   height: auto;
   img {
     width: 100%;
@@ -308,8 +310,8 @@ ul li a:hover {
   }
 }
 .text-wrapper {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 9%;
+  padding-right: 9%;
   @media only screen and (min-width: 1400px) {
     padding: 0 25%;
   }
@@ -321,7 +323,8 @@ ul li a:hover {
 }
 
 .about-text-container {
-  padding-top: 40px;
+  width: 100vw;
+  padding: 50px 10%;
   h1 {
     width: 100%;
     font-family: "Lato", serif;
@@ -356,7 +359,7 @@ ul li a:hover {
   justify-content: flex-start;
   place-items: center;
   flex-direction: row;
-  width: 100%;
+  width: 100vw;
   height: 400px;
   overflow: hidden;
   padding: 5%;
@@ -421,6 +424,7 @@ ul li a:hover {
 }
 
 .collections {
+  width: 100vw;
   h1 {
     font-size: 30px;
     letter-spacing: 3px;
@@ -440,6 +444,9 @@ ul li a:hover {
 
 .projects {
   margin-top: -150px;
+  @media only screen and (min-width: 1200px) {
+    margin-top: -60px;
+  }
 }
 .explore-container {
   display: inline-flex;
@@ -698,6 +705,7 @@ ul li a:hover {
   background-color: black;
   color: gray;
   padding: 0 10%;
+  width: 100vw;
   padding-left h1 {
     padding-top: 40px;
     padding-bottom: 20px;
@@ -706,6 +714,7 @@ ul li a:hover {
   }
   h1 {
     padding-top: 50px;
+    width: 100vw;
   }
   a {
     color: inherit;
@@ -787,15 +796,13 @@ ul li a:hover {
   }
 }
 
-//--- COLLECTIONS PAGE START ---//
+//--- ALL COLLECTIONS PAGE START ---//
 .collections-page-text {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   margin-top: 50px;
-  margin-right: 10%;
-  margin-left: 10%;
-  width: 100%;
+  width: 100vw;
 
   h2 {
     font-size: 50px;
@@ -817,8 +824,9 @@ ul li a:hover {
     line-height: 1.7;
   }
 
-  @media only screen and (min-width: 1400px) {
-    padding-right: 50%;
+  @media only screen and (min-width: 1000px) {
+    margin-right: 50%;
+    padding: 0 10%;
     padding-bottom: 60px;
     padding-top: 50px;
 
@@ -840,7 +848,7 @@ ul li a:hover {
   grid-gap: 3%;
   margin: 0 auto;
 
-  padding-bottom: 100px;
+  padding-bottom: 35px;
   padding-top: 50px;
   width: 80%;
   @media only screen and (max-width: 600px) {
@@ -897,4 +905,33 @@ ul li a:hover {
       margin-right: 20px;
     }
   }
+}
+
+//--- BOTTLE COLLECTION PAGE START ---//
+
+.bottles-img-main {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  img {
+    width: 100%;
+    padding: 2% 25%;
+    padding-bottom: 5%;
+    @media only screen and (max-width:900px){
+      padding: 0;
+    }
+  }
+  h1 {
+    position:absolute;
+    transform: rotate(-90deg);
+    top: 460px;
+    left:380px
+  }
+  h2 {
+    position: relative;
+    transform: rotate(90deg);
+    left: 500px;
+    top: 460px;
+  }
+  
 }
