@@ -12,6 +12,11 @@
   font-weight: normal;
 }
 
+:root {
+  --lrgtitle-font-family: "Lato", sans-serif;
+  --smtext-font-family: "Montserrat", sans-serif;
+}
+
 html,
 body {
   position: relative;
@@ -64,6 +69,25 @@ section {
           justify-content: space-between;
   width: 100vw;
   background: transparent;
+}
+
+.navbar .desktop-nav-links {
+  width: 100%;
+}
+
+.navbar .desktop-nav-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media only screen and (max-width: 1280px) {
+  .navbar .desktop-nav-links {
+    display: none;
+  }
 }
 
 .logo,
@@ -1088,14 +1112,7 @@ ul li a:hover {
 
 .bottles-img-main img {
   width: 100%;
-  padding: 2% 25%;
-  padding-bottom: 5%;
-}
-
-@media only screen and (max-width: 900px) {
-  .bottles-img-main img {
-    padding: 0;
-  }
+  padding: 5% 25%;
 }
 
 .bottles-img-main h1 {
@@ -1103,14 +1120,63 @@ ul li a:hover {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   top: 50%;
-  left: 18%;
+  left: 17%;
+  letter-spacing: 3px;
+  font-family: var(--lrgtitle-font-family);
+  font-weight: 400;
 }
 
 .bottles-img-main h2 {
   position: absolute;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  right: 20%;
+  right: 18.8%;
   top: 50%;
+  letter-spacing: 3px;
+  font-family: var(--lrgtitle-font-family);
+  font-weight: 700;
+}
+
+.bottles-img-main h3 {
+  position: absolute;
+  bottom: 6%;
+  left: 46%;
+  letter-spacing: 3px;
+  font-family: var(--lrgtitle-font-family);
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 700px) {
+  .bottles-img-main {
+    margin-bottom: 50px;
+  }
+  .bottles-img-main img {
+    padding: 0;
+  }
+  .bottles-img-main h1 {
+    font-size: 11px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: 110%;
+    left: 10.2%;
+  }
+  .bottles-img-main h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 15px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: 104%;
+    left: 75%;
+  }
+  .bottles-img-main h3 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: 104%;
+    left: 10.2%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
