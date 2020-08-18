@@ -924,14 +924,14 @@ ul li a:hover {
   h1 {
     position:absolute;
     transform: rotate(-90deg);
-    top: 460px;
-    left:380px
+    top: 50%;
+    left:18%;
   }
   h2 {
-    position: relative;
+    position: absolute;
     transform: rotate(90deg);
-    left: 500px;
-    top: 460px;
+    right: 20%;
+    top: 50%;
   }
   
 }

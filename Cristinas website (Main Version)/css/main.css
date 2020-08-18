@@ -1102,15 +1102,15 @@ ul li a:hover {
   position: absolute;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  top: 460px;
-  left: 380px;
+  top: 50%;
+  left: 18%;
 }
 
 .bottles-img-main h2 {
-  position: relative;
+  position: absolute;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  left: 500px;
-  top: 460px;
+  right: 20%;
+  top: 50%;
 }
 /*# sourceMappingURL=main.css.map */
