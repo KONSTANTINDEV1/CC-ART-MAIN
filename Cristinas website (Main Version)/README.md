@@ -1,4 +1,9 @@
 # Cristinas-website
+ISSUES DISCUSSED IN MEETING:
+
+1. .img-side-left 
+ - To have the image and and h4 tag relative to eachother
+ - For the h4 tag to keep it's positioning as the image increases in size with browser resise.
  
 PAGES/SECTIONS TO CURRENTLY FINISH:
 
