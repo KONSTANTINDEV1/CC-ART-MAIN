@@ -246,12 +246,12 @@ nav.sticky .menu-icon span {
   transition: 1s ease-out;
 }
 
-ul {
+.desktop-nav-links ul {
   margin: 0;
   padding: 20px 0px;
 }
 
-ul a {
+.desktop-nav-links ul li a {
   padding: 10px 20px;
   color: gray;
   font-size: 20px;
@@ -260,7 +260,7 @@ ul a {
   transition: color 0.3s ease;
 }
 
-ul a:hover {
+.desktop-nav-links ul li a:hover {
   color: black;
 }
 
@@ -452,8 +452,8 @@ ul a:hover {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   color: inherit;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .about-text-container .findoutmore-btn a:hover {
@@ -772,6 +772,7 @@ ul a:hover {
   width: 100%;
   height: 700px;
   margin-bottom: 50px;
+  margin-left: 5%;
   overflow: hidden;
   cursor: pointer;
 }
@@ -882,7 +883,7 @@ ul a:hover {
 
 .footer-container h1 {
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   padding-top: 50px;
@@ -897,13 +898,19 @@ ul a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 500px;
-  width: 80%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, 2fr);
+  padding-left: 2%;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   place-items: center;
 }
 
@@ -936,36 +943,99 @@ ul a:hover {
   padding-bottom: 10px;
 }
 
-.footerlinks-container .copyright {
+.copyright {
   color: gray;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 11px;
 }
 
-.footer-links1,
-.footer-links2 {
+.footerlinks-item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  width: 250px;
+  height: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+}
+
+.footerlinks-item h3 {
+  font-size: 15px;
+  font-family: var(--lrgtitle-font-family);
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.footerlinks-item li {
+  font-size: 14px;
+  font-family: var(--smtext-font-family);
+}
+
+.email-us-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  padding: 5% 0;
+}
+
+.email-us-container h2 {
+  font-family: var(--lrgtitle-font-family);
+  color: white;
+  font-size: 15px;
+  letter-spacing: 3px;
+  padding-bottom: 20px;
+}
+
+.email-us-container .email-us-btn {
+  cursor: pointer;
+  width: 220px;
+  height: 63px;
+  outline: none;
+  border: 1px solid gray;
+  background-color: black;
+  outline: none;
+  color: #808080;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  font-family: var(--lrgtitle-font-family);
+}
+
+.email-us-container .email-us-btn:hover {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: white;
+  border-color: white;
+  color: black;
 }
 
 .footer-links-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: white;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  place-items: center;
 }
 
 #home .navbar .desktop-nav-links {
@@ -1181,7 +1251,7 @@ ul a:hover {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   top: 50%;
-  left: 17%;
+  left: 14%;
   letter-spacing: 3px;
   font-family: var(--lrgtitle-font-family);
   font-weight: 400;
@@ -1191,7 +1261,7 @@ ul a:hover {
   position: absolute;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  right: 18.8%;
+  right: 16.5%;
   top: 50%;
   letter-spacing: 3px;
   font-family: var(--lrgtitle-font-family);
@@ -1209,7 +1279,7 @@ ul a:hover {
 
 @media only screen and (max-width: 700px) {
   .bottles-img-main {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
   .bottles-img-main img {
     padding: 0;
@@ -1219,7 +1289,7 @@ ul a:hover {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     top: 110%;
-    left: 10.2%;
+    left: 5%;
   }
   .bottles-img-main h2 {
     width: 100%;
@@ -1237,7 +1307,7 @@ ul a:hover {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     top: 104%;
-    left: 10.2%;
+    left: 5%;
   }
 }
 
@@ -1252,6 +1322,13 @@ ul a:hover {
   width: 100vw;
 }
 
+.single-collection-img-container h1 {
+  width: 100%;
+  letter-spacing: 3px;
+  font-family: var(--lrgtitle-font-family);
+  font-weight: 700;
+}
+
 .single-collection-img-container img {
   width: 250px;
   height: 250px;
@@ -1261,5 +1338,22 @@ ul a:hover {
 .single-collection-img-container p {
   padding-right: 60%;
   padding-top: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .single-collection-img-container {
+    padding: 15px 5%;
+  }
+  .single-collection-img-container h1 {
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+  .single-collection-img-container p {
+    padding-right: 0%;
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
 /*# sourceMappingURL=main.css.map */
