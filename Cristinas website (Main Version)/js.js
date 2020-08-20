@@ -134,35 +134,31 @@ var swiper2 = new Swiper(".s2", {
   },
   grabCursor: true,
   freeMode: true,
-  centerSlides: false,
-  centeredSlidesBounds: true,
   // autoplay: true,
-  waitForTransition: true,
   followFinger: true,
 
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: "auto",
+      slidesPerView: 1,
       spaceBetween: 20,
       autoResize: true,
     },
     // when window width is >= 480px
     480: {
-      slidesPerView: "auto",
+      slidesPerView: 1,
       spaceBetween: 30,
       autoResize: true,
     },
     // when window width is >= 640px
     740: {
-      slidesPerView: "auto",
+      slidesPerView: 1,
       spaceBetween: 40,
       autoResize: true,
     },
   },
 });
-
 
 barba.hooks.beforeEnter((data) => {
   // this hook will be called during every transitions
@@ -191,7 +187,6 @@ barba.hooks.beforeEnter((data) => {
   //--- CAROUSEL ---//
 
   //-- Initialize Swiper
-
   var swiper = new Swiper(".s1", {
     loop: false,
     grabCursor: true,
@@ -223,7 +218,6 @@ barba.hooks.beforeEnter((data) => {
         slidesPerView: 1,
         spaceBetween: 40,
         autoResize: true,
-        
       },
     },
   });
@@ -234,29 +228,28 @@ barba.hooks.beforeEnter((data) => {
     },
     grabCursor: true,
     freeMode: true,
-    centerSlides: false,
-    centeredSlidesBounds: true,
     // autoplay: true,
-    waitForTransition: true,
     followFinger: true,
 
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
       320: {
-        slidesPerView: "auto",
+        slidesPerView: 1,
         spaceBetween: 20,
+        autoResize: true,
       },
       // when window width is >= 480px
       480: {
-        slidesPerView: "auto",
+        slidesPerView: 1,
         spaceBetween: 30,
         autoResize: true,
       },
       // when window width is >= 640px
       740: {
-        slidesPerView: "auto",
+        slidesPerView: 1,
         spaceBetween: 40,
+        autoResize: true,
       },
     },
   });
