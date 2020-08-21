@@ -4,13 +4,11 @@ const menuIcon = document.querySelector(".menu-icon");
 function toggleMenuIcon() {
   menuIcon.classList.toggle("active");
 }
-
 menuIcon.addEventListener("click", toggleMenuIcon);
 
 //--- SCROLL NAV ---//
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".navbar");
-
   header.classList.toggle("sticky", window.scrollY > 800);
 });
 
@@ -165,19 +163,19 @@ barba.hooks.beforeEnter((data) => {
   // before new page content enter…
 
   $(document).ready(function () {
-    $(this).scrollTop(0);
+    window.scrollTo(0,0);
+    const menuIcon = document.querySelector(".menu-icon");
+
+    function toggleMenuIcon() {
+      menuIcon.classList.toggle("active");
+    }
+    menuIcon.addEventListener("click", toggleMenuIcon);
   });
   $(document).ready(function () {
     $(".sidebarBtn").click(function () {
       $(".sidebar").toggleClass("active");
     });
   });
-  
-  function toggleMenuIcon() {
-    menuIcon.classList.toggle("active");
-  }
-
-  menuIcon.addEventListener("click", toggleMenuIcon);
 
   // GSAP ANIMATION
   const welcomeText = document.querySelector(".content-wrap");

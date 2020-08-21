@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-body,html,* {
+body,
+html,
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -31,7 +33,6 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-
 section {
   position: relative;
   display: flex;
@@ -183,7 +184,7 @@ nav.sticky .menu-icon span {
   }
   @media only screen and (max-width: 600px) {
   }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 600px) {
     padding-right: 0;
     height: 40px;
     & > span {
@@ -319,6 +320,9 @@ nav.sticky .menu-icon span {
   background-color: rgba(68, 68, 68, 0.8);
   margin-left: 10%;
   margin-top: 18px;
+  @media only screen and (max-width: 600px) {
+    margin-left: 13%;
+  }
 }
 
 .active {
@@ -1000,7 +1004,6 @@ nav.sticky .menu-icon span {
     }
 
     hr {
-     
       place-items: center;
       box-sizing: border-box;
       height: 0;
@@ -1023,7 +1026,7 @@ nav.sticky .menu-icon span {
     }
     @media only screen and (max-width: 600px) {
       height: 500px;
-      
+
       h2 {
         top: 98%;
         padding: 20px;
@@ -1052,37 +1055,36 @@ nav.sticky .menu-icon span {
       }
     }
   }
-    @media only screen and (max-width: 320px) {
-      height: 400px;
-      h2 {
-        top: 98%;
-        padding: 20px;
-        font-size: 11px;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-      }
+  @media only screen and (max-width: 320px) {
+    height: 400px;
+    h2 {
+      top: 98%;
+      padding: 20px;
+      font-size: 11px;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+    }
 
-      h4 {
-        color: gray;
-        font-size: 11px;
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        position: relative;
-        padding-top: 5px;
-        top: 7%;
-      }
+    h4 {
+      color: gray;
+      font-size: 11px;
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      position: relative;
+      padding-top: 5px;
+      top: 7%;
+    }
 
-      hr {
-        box-sizing: border-box;
-        height: 0;
-        border-top-width: 1px;
-        border-color: black;
-        width: 20px;
-        margin: 4px 0;
-      }
+    hr {
+      box-sizing: border-box;
+      height: 0;
+      border-top-width: 1px;
+      border-color: black;
+      width: 20px;
+      margin: 4px 0;
     }
   }
-
+}
 
 //BARBA
 .loading-screen-logo {
@@ -1105,13 +1107,12 @@ nav.sticky .menu-icon span {
 }
 
 .load-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 10;
   pointer-events: none;
   z-index: 999;
 }
@@ -1138,13 +1139,12 @@ nav.sticky .menu-icon span {
   a {
     color: inherit;
   }
-  @media only screen and (max-width:600px) {
+  @media only screen and (max-width: 600px) {
     h1 {
       font-size: 22px;
       padding-top: 50px;
     }
   }
-
 }
 
 .footerlinks-container {
@@ -1187,7 +1187,6 @@ nav.sticky .menu-icon span {
     padding-bottom: 10px;
   }
   @media only screen and (max-width: 600px) {
-    
     // padding-left: 50px;
     margin-bottom: 20px;
     grid-gap: 0 18%;
@@ -1197,7 +1196,6 @@ nav.sticky .menu-icon span {
   @media only screen and (max-width: 320px) {
     grid-template-columns: repeat(auto-fill, minmax(0px, 100px));
     grid-auto-rows: minmax(200px, 2fr);
-    
   }
 }
 .copyright {
