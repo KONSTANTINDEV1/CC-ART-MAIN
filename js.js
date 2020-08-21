@@ -54,7 +54,7 @@ function pageTransition() {
     width: "100%",
     left: "-100%",
     ease: "Expo.easeInOut",
-    delay: 1,
+    delay: 1.5,
   });
   tl.set(".loading-screen", { left: "-100%" });
 }
