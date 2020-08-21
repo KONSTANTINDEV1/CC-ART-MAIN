@@ -172,6 +172,12 @@ barba.hooks.beforeEnter((data) => {
       $(".sidebar").toggleClass("active");
     });
   });
+  
+  function toggleMenuIcon() {
+    menuIcon.classList.toggle("active");
+  }
+
+  menuIcon.addEventListener("click", toggleMenuIcon);
 
   // GSAP ANIMATION
   const welcomeText = document.querySelector(".content-wrap");

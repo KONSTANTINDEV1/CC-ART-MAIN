@@ -483,7 +483,7 @@ nav.sticky .menu-icon span {
 
 @media only screen and (max-width: 600px) {
   .catch-phrase {
-    font-size: 3.3rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -549,6 +549,10 @@ nav.sticky .menu-icon span {
 }
 
 @media only screen and (max-width: 600px) {
+  .enter-btn-container {
+    height: 7.5vh;
+    border: 1px solid #c1c1c1;
+  }
   .enter-btn-container a {
     font-size: 1.8rem;
   }
@@ -892,9 +896,9 @@ nav.sticky .menu-icon span {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 600px) {
   .projects {
-    margin-top: -100px;
+    margin-top: -50px;
   }
 }
 
@@ -942,6 +946,12 @@ nav.sticky .menu-icon span {
   font-weight: 700;
 }
 
+@media only screen and (max-width: 600px) {
+  .explore-container {
+    padding-bottom: 40px;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .explore-container {
     padding-bottom: 40px;
@@ -958,7 +968,8 @@ nav.sticky .menu-icon span {
 
 @media only screen and (max-width: 600px) {
   .swiper-container {
-    width: 90vw;
+    height: 450px;
+    width: 85vw;
   }
 }
 
@@ -1001,6 +1012,12 @@ nav.sticky .menu-icon span {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .swiper-slide {
+    height: 500px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -1046,6 +1063,12 @@ nav.sticky .menu-icon span {
   top: 5%;
 }
 
+@media only screen and (max-width: 600px) {
+  .carousel_nav-container {
+    top: -40%;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .carousel_nav-container {
     top: -80%;
@@ -1068,7 +1091,7 @@ nav.sticky .menu-icon span {
   outline: none;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 600px) {
   .swiper-button-prev,
   .swiper-button-next {
     padding-left: 20px;
@@ -1115,6 +1138,12 @@ nav.sticky .menu-icon span {
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  .discover-more {
+    top: 560px;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .discover-more {
     top: 450px;
@@ -1148,6 +1177,10 @@ nav.sticky .menu-icon span {
           justify-content: center;
   width: 100%;
   margin: 0 auto;
+}
+
+.s2 {
+  margin-bottom: 150px;
 }
 
 .s2 .swiper-container {
@@ -1220,6 +1253,7 @@ nav.sticky .menu-icon span {
 }
 
 .s2 .swiper-slide hr {
+  place-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 0;
@@ -1241,9 +1275,13 @@ nav.sticky .menu-icon span {
           transform: scale(1.5);
 }
 
-@media only screen and (max-width: 320px) {
+.s2 .swiper-slide .overflow {
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
   .s2 .swiper-slide {
-    height: 400px;
+    height: 500px;
   }
   .s2 .swiper-slide h2 {
     top: 98%;
@@ -1272,8 +1310,35 @@ nav.sticky .menu-icon span {
   }
 }
 
-.s2 .overflow {
-  overflow: hidden;
+@media only screen and (max-width: 320px) {
+  .s2 {
+    height: 400px;
+  }
+  .s2 h2 {
+    top: 98%;
+    padding: 20px;
+    font-size: 11px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+  }
+  .s2 h4 {
+    color: gray;
+    font-size: 11px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    position: relative;
+    padding-top: 5px;
+    top: 7%;
+  }
+  .s2 hr {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 0;
+    border-top-width: 1px;
+    border-color: black;
+    width: 20px;
+    margin: 4px 0;
+  }
 }
 
 .loading-screen-logo {
@@ -1311,7 +1376,17 @@ nav.sticky .menu-icon span {
 }
 
 .footer-container {
-  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #111;
   color: gray;
   padding: 0 10%;
   width: 100vw;
@@ -1330,24 +1405,20 @@ nav.sticky .menu-icon span {
   color: inherit;
 }
 
+@media only screen and (max-width: 600px) {
+  .footer-container h1 {
+    font-size: 22px;
+    padding-top: 50px;
+  }
+}
+
 .footerlinks-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: minmax(200px, 2fr);
-  padding-left: 2%;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  flex-wrap: wrap;
-  place-items: center;
 }
 
 .footerlinks-container ul {
@@ -1379,10 +1450,20 @@ nav.sticky .menu-icon span {
   padding-bottom: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+  .footerlinks-container {
+    margin-bottom: 20px;
+    grid-gap: 0 18%;
+    -ms-grid-columns: (minmax(100px, 2fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+    grid-auto-rows: minmax(200px, 2fr);
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .footerlinks-container {
-    -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    -ms-grid-columns: (minmax(0px, 100px))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(0px, 100px));
     grid-auto-rows: minmax(200px, 2fr);
   }
 }
@@ -1408,7 +1489,7 @@ nav.sticky .menu-icon span {
           flex-direction: column;
   margin-bottom: 10px;
   margin-left: 0px;
-  width: 250px;
+  width: 350px;
   height: 200px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 300px;
@@ -1425,6 +1506,24 @@ nav.sticky .menu-icon span {
 .footerlinks-item li {
   font-size: 14px;
   font-family: var(--smtext-font-family);
+}
+
+@media only screen and (max-width: 600px) {
+  .footerlinks-item h3 {
+    font-size: 10px;
+    font-family: var(--lrgtitle-font-family);
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .footerlinks-item h3 {
+    font-size: 10px;
+    font-family: var(--lrgtitle-font-family);
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
 }
 
 .email-us-container {
@@ -1763,6 +1862,7 @@ nav.sticky .menu-icon span {
   }
   .bottles-img-main img {
     padding: 0;
+    height: 350px;
   }
   .bottles-img-main h1 {
     font-size: 11px;
@@ -1796,7 +1896,7 @@ nav.sticky .menu-icon span {
     font-size: 11px;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-    top: 110%;
+    top: 112%;
     left: 5%;
   }
   .bottles-img-main h2 {
@@ -1828,6 +1928,13 @@ nav.sticky .menu-icon span {
             transform: rotate(0deg);
     top: 104.2%;
     left: 55%;
+  }
+  .bottles-img-main h1 {
+    font-size: 11px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: 115%;
+    left: 5%;
   }
 }
 
