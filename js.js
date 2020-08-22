@@ -155,6 +155,11 @@ var swiper2 = new Swiper(".s2", {
       spaceBetween: 40,
       autoResize: true,
     },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+      autoResize: true,
+    },
   },
 });
 
