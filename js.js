@@ -150,12 +150,22 @@ var swiper2 = new Swiper(".s2", {
       autoResize: true,
     },
     // when window width is >= 640px
-    740: {
-      slidesPerView: 1,
+    760: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+      autoResize: true,
+    },
+    1000: {
+      slidesPerView: 2,
       spaceBetween: 40,
       autoResize: true,
     },
     1440: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+      autoResize: true,
+    },
+    1800: {
       slidesPerView: 3,
       spaceBetween: 40,
       autoResize: true,
@@ -168,7 +178,7 @@ barba.hooks.beforeEnter((data) => {
   // before new page content enter…
 
   $(document).ready(function () {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     const menuIcon = document.querySelector(".menu-icon");
 
     function toggleMenuIcon() {
@@ -255,8 +265,23 @@ barba.hooks.beforeEnter((data) => {
         autoResize: true,
       },
       // when window width is >= 640px
-      740: {
-        slidesPerView: 1,
+      760: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        autoResize: true,
+      },
+      1000: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        autoResize: true,
+      },
+      1440: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        autoResize: true,
+      },
+      1800: {
+        slidesPerView: 3,
         spaceBetween: 40,
         autoResize: true,
       },

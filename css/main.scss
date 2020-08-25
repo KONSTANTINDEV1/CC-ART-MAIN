@@ -44,15 +44,19 @@ section {
 
 .section1 {
   position: relative;
-  background-image: url(/img/forestLarge.svg);
+  background-image: url(/img/landingpage-image.png);
   background-size: 100% 100%;
   height: 100vh;
   width: 100vw;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (min-width: 1000px) {
+    margin-top: 70px;
+  }
+  @media only screen and (max-width: 700px) {
     background-image: url(/img/forest-full.svg);
     background-size: 100% 100%;
   }
   @media only screen and (max-width: 600px) {
+    object-fit: cover;
   }
   @media only screen and (max-width: 320px) {
   }
@@ -60,25 +64,42 @@ section {
 
 .navbar {
   position: fixed;
-  padding: 15px;
+  padding: 0 50px;
   z-index: 99;
   display: flex;
   justify-content: space-between;
+  place-items: center;
   width: 100vw;
   background: transparent;
   .desktop-nav-links {
     width: 100%;
     ul {
       display: flex;
-      justify-content: flex-start;
+      justify-content: flex-end;
+      padding: 20px 16px;
     }
-    a {
+    ul li a {
+      padding: 10px 20px;
+      color: gray;
+      font-size: 20px;
+      display: block;
+      transition: color 0.3s ease;
       font-family: var(--lrgtitle-font-family);
+      &:hover {
+        color: black;
+      }
     }
   }
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (min-width: 1000px) {
+    position: fixed;
+    background-color: white;
+  }
+  @media only screen and (max-width: 1000px) {
     .desktop-nav-links {
       display: none;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 0 15px;
     }
     @media only screen and (max-width: 320px) {
       padding: 10px 10px;
@@ -87,8 +108,17 @@ section {
 }
 .logo,
 .logo-topnav {
-  width: 125px;
-  display: none;
+  width: 165px;
+  padding: 5px 0;
+  opacity: 0;
+  @media only screen and (min-width: 1000px) {
+    opacity: 1;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 135px;
+    position: relative;
+    top: 2px;
+  }
   @media only screen and (max-width: 320px) {
     width: 107px;
     position: relative;
@@ -101,34 +131,26 @@ section {
   display: flex;
   justify-content: space-between;
   place-items: center;
-  padding: 15px;
+  padding: 0 15px;
   width: 100vw;
   background-color: white;
   box-shadow: 0px 0px 2px -0.5px rgba(0, 0, 0, 0.611);
+  @media only screen and (min-width: 1000px) {
+    padding: 0px 50px;
+  }
   @media only screen and (max-width: 320px) {
-    padding: 10px 10px;
+    padding: 0px 10px;
   }
 }
 
 nav.sticky .logo-topnav {
-  display: inline-block;
-}
-
-nav.sticky .menu-icon span {
-  display: block;
-  position: relative;
-  bottom: 12px;
-  color: rgb(201, 201, 201);
-  @media only screen and (max-width: 320px) {
-    bottom: 10px;
-  }
+  opacity: 1;
 }
 
 .menu-icon {
   display: grid;
   place-items: center;
   position: relative;
-  top: 8px;
   z-index: 100;
   height: 55px;
   // width: 5vw;
@@ -343,10 +365,6 @@ nav.sticky .menu-icon span {
 }
 
 .desktop-nav-links {
-  ul {
-    margin: 0;
-    padding: 20px 0px;
-  }
   ul li a {
     padding: 10px 20px;
     color: gray;
@@ -356,6 +374,9 @@ nav.sticky .menu-icon span {
     &:hover {
       color: black;
     }
+  }
+  @media only screen and (min-width: 1000px) {
+    display: block !important;
   }
 }
 
@@ -401,7 +422,8 @@ nav.sticky .menu-icon span {
   position: relative;
   top: 0%;
   font-size: 4rem;
-  line-height: 110.5%;
+
+  line-height: 1.5;
   letter-spacing: 0.375em;
   padding-left: 0.375em;
   color: rgba(134, 141, 150, 0.844);
@@ -410,6 +432,8 @@ nav.sticky .menu-icon span {
   @media only screen and (min-width: 1400px) {
     text-align: left;
     padding: 0 50%;
+    top: -58%;
+    left: -10%;
   }
   @media only screen and (max-width: 600px) {
     font-size: 2.4rem;
@@ -420,58 +444,69 @@ nav.sticky .menu-icon span {
 }
 
 .enter-btn-container {
-  position: relative;
   display: flex;
-  justify-content: center;
-  width: 50%;
-  height: 6vh;
-  top: 12%;
-  margin: 0 auto;
-  place-items: center;
-  text-align: center;
-  padding-left: 0.375em;
-  border: 1.5px solid rgb(193, 193, 193);
-  font-family: "Peddana", serif;
-  font-style: normal;
-  font-weight: normal;
-  color: gray;
-  font-size: 37px;
-  letter-spacing: 0.375em;
-  cursor: pointer;
-  transition: all 1s ease;
-  a {
-    transition: color 2s ease;
-    height: 100%;
-    width: 100%;
+  justify-content: flex-start;
+  position: relative;
+
+  .button {
+    position: absolute;
     display: flex;
-    text-align: center;
     justify-content: center;
+    width: 50%;
+    height: 6vh;
+    top: 12%;
+    margin: 0 auto;
     place-items: center;
-    color: rgba(134, 141, 150, 0.844);
-    transition: color 1s ease;
+    text-align: center;
+
+    border: 1.5px solid rgb(193, 193, 193);
+    font-family: "Peddana", serif;
+    font-style: normal;
+    font-weight: normal;
+    color: gray;
+    font-size: 37px;
+    letter-spacing: 0.375em;
+    cursor: pointer;
+    transition: all 1s ease;
+    a {
+      transition: color 2s ease;
+      height: 100%;
+      width: 100%;
+      padding-left: 0.375em;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      place-items: center;
+      color: rgba(134, 141, 150, 0.844);
+      transition: all 1s ease;
+      &:hover {
+        color: white;
+      }
+    }
     &:hover {
+      background-color: black;
+      border-color: black;
       color: white;
     }
-  }
-
-  &:hover {
-    background-color: black;
-    border-color: black;
-    color: white;
-  }
-  @media only screen and (max-width: 600px) {
-    height: 7.5vh;
-    border: 1px solid rgb(193, 193, 193);
-    a {
-      font-size: 1.8rem;
+    @media only screen and (min-width: 1000px) {
+      width: 250px;
+      top: -116px;
+      right: 63%;
     }
-  }
-  @media only screen and (max-width: 320px) {
-    a {
-      font-size: 1.3rem;
+    @media only screen and (max-width: 600px) {
+      height: 7.5vh;
+      border: 1px solid rgb(193, 193, 193);
+      a {
+        font-size: 1.8rem;
+      }
     }
-    height: 7.5vh;
-    border: 1px solid rgb(193, 193, 193);
+    @media only screen and (max-width: 320px) {
+      a {
+        font-size: 1.3rem;
+      }
+      height: 7.5vh;
+      border: 1px solid rgb(193, 193, 193);
+    }
   }
 }
 
@@ -609,9 +644,9 @@ nav.sticky .menu-icon span {
   place-items: center;
   flex-direction: row;
   width: 100vw;
-  height: auto;
+  max-height: 900px;
   overflow: hidden;
-  padding: 5%;
+  padding: 10% 0;
   margin: 0px 0;
 
   img {
@@ -621,7 +656,7 @@ nav.sticky .menu-icon span {
     width: 65%;
     height: auto;
     object-fit: cover;
-    transform: rotate(90deg);
+    
     margin: 0 auto;
     border: 4px solid rgba(245, 242, 242, 0.776);
   }
@@ -643,22 +678,28 @@ nav.sticky .menu-icon span {
     font-size: 15px;
     margin: 0 auto;
   }
-  @media only screen and (max-width: 600px) {
-    padding: 0%;
-    margin: -40px 0px;
+  @media only screen and (max-width: 1650px) {
+    max-height: 680px;
   }
-  @media only screen and (max-width: 320px) {
-    margin: 0px 0px;
+  @media only screen and (max-width: 1439px) {
+    max-height: 600px;
   }
   @media only screen and (min-width: 1400px) {
-    padding: 0;
+    
     img {
       max-width: 100%;
       height: auto;
       object-fit: cover;
-      transform: rotate(90deg);
+      
       margin: 0 auto;
     }
+  }
+  @media only screen and (max-width: 600px) {
+    
+    margin: -40px 0px;
+  }
+  @media only screen and (max-width: 320px) {
+    margin: 0px 0px;
   }
 }
 
@@ -671,18 +712,17 @@ nav.sticky .menu-icon span {
   flex-direction: row;
   width: 100vw;
   overflow: hidden;
-  padding: 5%;
-  padding-top: 4%;
+  
+  padding: 10% 0;
   margin: 0px 0;
 
   img {
     position: relative;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 65%;
-
+    height: 100%;
     object-fit: cover;
-    transform: rotate(-90deg);
     border: 4px solid rgba(245, 242, 242, 0.776);
   }
   h4 {
@@ -959,6 +999,8 @@ nav.sticky .menu-icon span {
   .swiper-wrapper {
     width: 600px;
     height: 700px;
+
+    margin: 0;
   }
 
   .swiper-slide {
@@ -1089,7 +1131,7 @@ nav.sticky .menu-icon span {
 //BARBA
 .loading-screen-logo {
   display: flex;
-  width: 100%;
+  max-width: 100%;
   max-height: 100%;
   position: relative;
   z-index: 999999;
@@ -1123,10 +1165,10 @@ nav.sticky .menu-icon span {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  place-items: center;
   background-color: #111;
   color: gray;
-  padding: 0 10%;
-  width: 100vw;
+  width: 100%;
 
   h1 {
     padding-top: 40px;
@@ -1134,7 +1176,7 @@ nav.sticky .menu-icon span {
     font-family: "Lato", sans-serif;
     font-weight: 700;
     padding-top: 50px;
-    width: 100vw;
+    width: 100%;
   }
   a {
     color: inherit;
@@ -1147,6 +1189,10 @@ nav.sticky .menu-icon span {
   }
 }
 
+.footer-grid-container {
+  width: 80%;
+}
+
 .footerlinks-container {
   // display: flex;
   // flex-wrap: wrap;
@@ -1157,12 +1203,11 @@ nav.sticky .menu-icon span {
   grid-auto-rows: minmax(200px, 2fr);
   // grid-gap: 3%;
   // padding-left: 2%;
-  width: 100%;
+  width: auto;
 
   ul {
     // border: 1px solid white;
     text-align: left;
-    width: 50%;
     margin-top: -20px;
   }
 
@@ -1186,13 +1231,13 @@ nav.sticky .menu-icon span {
     color: white;
     padding-bottom: 10px;
   }
-  @media only screen and (max-width: 600px) {
-    // padding-left: 50px;
-    margin-bottom: 20px;
-    grid-gap: 0 18%;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+  @media only screen and (min-width: 1500px) {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-auto-rows: minmax(200px, 2fr);
+    width: 100%;
+    justify-content: center;
   }
+
   @media only screen and (max-width: 320px) {
     grid-template-columns: repeat(auto-fill, minmax(0px, 100px));
     grid-auto-rows: minmax(200px, 2fr);
@@ -1213,13 +1258,9 @@ nav.sticky .menu-icon span {
   flex-direction: column;
   // border: 4px solid rgba(245, 242, 242, 0.776);
   // background-color: black;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  width: 350px;
-  height: 200px;
   flex: 1 1 300px;
   h3 {
-    font-size: 15px;
+    font-size: 12px;
     font-family: var(--lrgtitle-font-family);
     font-weight: 400;
     letter-spacing: 3px;
@@ -1301,9 +1342,9 @@ nav.sticky .menu-icon span {
     position: fixed;
     background-color: white;
     margin-top: -70px;
-  }
-  .logo-topnav {
-    display: block;
+    .logo-topnav {
+      opacity: 1;
+    }
   }
 }
 
@@ -1485,7 +1526,6 @@ nav.sticky .menu-icon span {
   margin-bottom: 200px;
   img {
     width: 100%;
-    padding: 5% 25%;
   }
   h1 {
     position: absolute;
@@ -1588,8 +1628,8 @@ nav.sticky .menu-icon span {
 .single-collection-img-container {
   display: flex;
   justify-content: space-between;
-  padding: 15px 10%;
-  width: 100vw;
+  padding: 40px 10%;
+  max-width: 100%;
   h1 {
     width: 100%;
     letter-spacing: 3px;
@@ -1597,18 +1637,15 @@ nav.sticky .menu-icon span {
     font-weight: 700;
   }
   img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    max-height: 700px;
     margin-right: 25px;
-    object-fit: cover;
-    object-position: top;
   }
   p {
     padding-right: 60%;
     padding-top: 20px;
   }
   @media only screen and (max-width: 800px) {
-    padding: 15px 5%;
     h1 {
       width: 100%;
       font-size: 16px;
@@ -1624,7 +1661,7 @@ nav.sticky .menu-icon span {
   @media only screen and (max-width: 600px) {
     flex-direction: column;
     justify-content: center;
-    padding: 15px 5%;
+
     h1 {
       width: 100%;
       font-size: 14px;
@@ -1632,8 +1669,8 @@ nav.sticky .menu-icon span {
       padding-top: 20px;
     }
     img {
-      width: 90vw;
-      height: 250px;
+      width: 100%;
+      height: auto;
       margin-right: 0;
     }
     p {
