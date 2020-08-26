@@ -537,6 +537,10 @@ nav.sticky .logo-topnav {
   text-transform: uppercase;
 }
 
+.catch-phrase p {
+  font-family: "Peddanaregular";
+}
+
 @media only screen and (min-width: 1400px) {
   .catch-phrase {
     text-align: left;
@@ -583,6 +587,7 @@ nav.sticky .logo-topnav {
   place-items: center;
   text-align: center;
   border: 1.5px solid #c1c1c1;
+  font-family: "Peddanaregular";
   font-style: normal;
   font-weight: normal;
   color: gray;
