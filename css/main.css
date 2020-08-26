@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @font-face {
-  font-family: "peddanaregular";
+  font-family: "Peddanaregular";
   src: url("../webfontkit/peddana-regular-webfont.woff2") format("woff2") !important;
   src: url("../webfontkit/peddana-regular-webfont.woff") format("woff") !important;
   font-weight: normal;
@@ -16,7 +16,6 @@ html,
   padding: 0;
   text-decoration: none;
   list-style: none;
-  font-family: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-weight: normal;
