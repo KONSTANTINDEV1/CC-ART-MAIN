@@ -514,7 +514,7 @@ nav.sticky .logo-topnav {
           justify-content: center;
 }
 
-.catch-phrase {
+#catch-phrase {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,12 +536,12 @@ nav.sticky .logo-topnav {
   text-transform: uppercase;
 }
 
-.catch-phrase p {
+#catch-phrase p {
   font-family: "Peddanaregular";
 }
 
 @media only screen and (min-width: 1400px) {
-  .catch-phrase {
+  #catch-phrase {
     text-align: left;
     padding: 0 50%;
     top: -58%;
@@ -550,13 +550,13 @@ nav.sticky .logo-topnav {
 }
 
 @media only screen and (max-width: 600px) {
-  .catch-phrase {
+  #catch-phrase {
     font-size: 2.4rem;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  .catch-phrase {
+  #catch-phrase {
     font-size: 1.9rem;
   }
 }
