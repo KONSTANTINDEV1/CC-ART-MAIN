@@ -518,6 +518,7 @@ nav.sticky .logo-topnav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: serif;
   font-style: 400;
   font-weight: normal;
   place-items: center;
@@ -534,10 +535,6 @@ nav.sticky .logo-topnav {
   color: rgba(134, 141, 150, 0.844);
   opacity: 0.89;
   text-transform: uppercase;
-}
-
-.welcome-page-text-container .catch-phrase p {
-  font-family: "Peddanaregular";
 }
 
 @media only screen and (min-width: 1400px) {
@@ -586,7 +583,7 @@ nav.sticky .logo-topnav {
   place-items: center;
   text-align: center;
   border: 1.5px solid #c1c1c1;
-  font-family: "Peddanaregular";
+  font-family: serif;
   font-style: normal;
   font-weight: normal;
   color: gray;
