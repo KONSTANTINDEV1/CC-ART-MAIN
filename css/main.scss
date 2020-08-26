@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "peddanaregular";
+  src: url("../webfontkit/peddana-regular-webfont.woff2") format("woff2") !important;
+  src: url("../webfontkit/peddana-regular-webfont.woff") format("woff") !important;
+  font-weight: normal;
+  font-style: normal;
+}
 @import url("https://fonts.googleapis.com/css2?family=Peddana&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
@@ -413,7 +420,9 @@ nav.sticky .logo-topnav {
 }
 .catch-phrase {
   display: flex;
-  font-family: "Peddana", sans-serif;
+  p {
+    font-family: "peddanaregular";
+  }
   font-style: normal;
   font-weight: normal;
   place-items: center;
@@ -460,7 +469,7 @@ nav.sticky .logo-topnav {
     text-align: center;
 
     border: 1.5px solid rgb(193, 193, 193);
-    font-family: "Peddana", serif;
+    font-family: "Peddanaregular";
     font-style: normal;
     font-weight: normal;
     color: gray;
@@ -656,7 +665,7 @@ nav.sticky .logo-topnav {
     width: 65%;
     height: auto;
     object-fit: cover;
-    
+
     margin: 0 auto;
     border: 4px solid rgba(245, 242, 242, 0.776);
   }
@@ -685,17 +694,15 @@ nav.sticky .logo-topnav {
     max-height: 600px;
   }
   @media only screen and (min-width: 1400px) {
-    
     img {
       max-width: 100%;
       height: auto;
       object-fit: cover;
-      
+
       margin: 0 auto;
     }
   }
   @media only screen and (max-width: 600px) {
-    
     margin: -40px 0px;
   }
   @media only screen and (max-width: 320px) {
@@ -712,7 +719,7 @@ nav.sticky .logo-topnav {
   flex-direction: row;
   width: 100vw;
   overflow: hidden;
-  
+
   padding: 10% 0;
   margin: 0px 0;
 
