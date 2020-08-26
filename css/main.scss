@@ -416,38 +416,38 @@ nav.sticky .logo-topnav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-#catch-phrase {
-  display: flex;
-  p {
-    font-family: "Peddanaregular";
-  }
-  font-style: normal;
-  font-weight: normal;
-  place-items: center;
-  text-align: center;
-  justify-content: center;
-  position: relative;
-  top: 0%;
-  font-size: 4rem;
+  .catch-phrase {
+    display: flex;
+    p {
+      font-family: "Peddanaregular";
+    }
+    font-style: 400;
+    font-weight: normal;
+    place-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 0%;
+    font-size: 4rem;
 
-  line-height: 1.5;
-  letter-spacing: 0.375em;
-  padding-left: 0.375em;
-  color: rgba(134, 141, 150, 0.844);
-  opacity: 0.89;
-  text-transform: uppercase;
-  @media only screen and (min-width: 1400px) {
-    text-align: left;
-    padding: 0 50%;
-    top: -58%;
-    left: -10%;
-  }
-  @media only screen and (max-width: 600px) {
-    font-size: 2.4rem;
-  }
-  @media only screen and (max-width: 320px) {
-    font-size: 1.9rem;
+    line-height: 1.5;
+    letter-spacing: 0.375em;
+    padding-left: 0.375em;
+    color: rgba(134, 141, 150, 0.844);
+    opacity: 0.89;
+    text-transform: uppercase;
+    @media only screen and (min-width: 1400px) {
+      text-align: left;
+      padding: 0 50%;
+      top: -58%;
+      left: -10%;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 2.4rem;
+    }
+    @media only screen and (max-width: 320px) {
+      font-size: 1.9rem;
+    }
   }
 }
 
