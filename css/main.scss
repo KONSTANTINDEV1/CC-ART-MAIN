@@ -420,9 +420,6 @@ nav.sticky .logo-topnav {
 }
 .catch-phrase {
   display: flex;
-  p {
-    font-family: "peddanaregular";
-  }
   font-style: normal;
   font-weight: normal;
   place-items: center;
@@ -469,7 +466,7 @@ nav.sticky .logo-topnav {
     text-align: center;
 
     border: 1.5px solid rgb(193, 193, 193);
-    font-family: "Peddanaregular";
+    
     font-style: normal;
     font-weight: normal;
     color: gray;
