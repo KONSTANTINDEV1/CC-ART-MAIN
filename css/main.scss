@@ -1,11 +1,4 @@
-@font-face {
-  font-family: "Peddanaregular";
-  src: url("../webfontkit/peddana-regular-webfont.woff2") format("woff2") !important;
-  src: url("../webfontkit/peddana-regular-webfont.woff") format("woff") !important;
-  font-weight: normal;
-  font-style: normal;
-}
-@import url("https://fonts.googleapis.com/css2?family=Peddana&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
@@ -418,7 +411,7 @@ nav.sticky .logo-topnav {
   justify-content: center;
   .catch-phrase {
     display: flex;
-    font-family: serif;
+    font-family: "Playfair Display" sans-serif;
     font-style: 400;
     font-weight: normal;
     place-items: center;
@@ -466,7 +459,8 @@ nav.sticky .logo-topnav {
     text-align: center;
 
     border: 1.5px solid rgb(193, 193, 193);
-    font-family: serif;
+    font-family: "Playfair Display" sans-serif;
+
     font-style: normal;
     font-weight: normal;
     color: gray;
