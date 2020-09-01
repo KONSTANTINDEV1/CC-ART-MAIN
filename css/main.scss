@@ -1,7 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
 body,
 html,
 * {
@@ -307,7 +303,7 @@ nav.sticky .logo-topnav {
       color: white;
     }
   }
-  
+
   @media only screen and (max-width: 320px) {
     h2 {
       padding-left: 10%;
@@ -411,7 +407,7 @@ nav.sticky .logo-topnav {
   justify-content: center;
   .catch-phrase {
     display: flex;
-    font-family: "Playfair Display" sans-serif;
+    font-family: "Peddana", sans-serif;
     font-style: 400;
     font-weight: normal;
     place-items: center;
@@ -459,7 +455,7 @@ nav.sticky .logo-topnav {
     text-align: center;
 
     border: 1.5px solid rgb(193, 193, 193);
-    font-family: "Playfair Display" sans-serif;
+    font-family: "Peddana", sans-serif;
     font-style: normal;
     font-weight: normal;
     color: gray;
@@ -1901,14 +1897,14 @@ nav.sticky .logo-topnav {
     padding-right: 26%;
     padding-top: 20px;
   }
- & > div {
-   padding: 2rem;
- }
-  &:nth-child(odd) img{
+  & > div {
+    padding: 2rem;
+  }
+  &:nth-child(odd) img {
     order: 2;
     margin: 0;
   }
- 
+
   @media only screen and (max-width: 800px) {
     h1 {
       width: 100%;
@@ -1946,7 +1942,6 @@ nav.sticky .logo-topnav {
 
 .single-collection-item-container {
   display: flex;
-
 }
 
 #bottle-collection-page {
