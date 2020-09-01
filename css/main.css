@@ -443,11 +443,12 @@ nav.sticky .logo-topnav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 18px;
 }
 
 .welcome-page-text-container .catch-phrase {
   display: flex;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-style: 400;
   font-weight: normal;
   place-items: center;
@@ -475,7 +476,8 @@ nav.sticky .logo-topnav {
 
 @media only screen and (max-width: 600px) {
   .welcome-page-text-container .catch-phrase {
-    font-size: 2.4rem;
+    font-size: 3rem;
+    flex-direction: column;
   }
 }
 
@@ -502,7 +504,7 @@ nav.sticky .logo-topnav {
   place-items: center;
   text-align: center;
   border: 1.5px solid #c1c1c1;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: normal;
   color: gray;
@@ -546,7 +548,10 @@ nav.sticky .logo-topnav {
 
 @media only screen and (max-width: 600px) {
   .enter-btn-container .button {
-    height: 7.5vh;
+    width: 250px;
+    height: 5vh;
+    top: 25px;
+    left: -135;
     border: 1px solid #c1c1c1;
   }
   .enter-btn-container .button a {
@@ -561,6 +566,12 @@ nav.sticky .logo-topnav {
   }
   .enter-btn-container .button a {
     font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .enter-btn-container {
+    justify-content: center;
   }
 }
 
