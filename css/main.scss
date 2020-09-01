@@ -434,6 +434,9 @@ nav.sticky .logo-topnav {
       font-size: 2.9rem;
       flex-direction: column;
       padding-left: 0em;
+      p {
+        padding-left: 0.4rem;
+      }
     }
     @media only screen and (max-width: 320px) {
       font-size: 1.9rem;
@@ -493,7 +496,7 @@ nav.sticky .logo-topnav {
     }
     @media only screen and (max-width: 600px) {
       width: 250px;
-      height: 5vh;
+      height:auto;
       top: 25px;
 
 
@@ -676,7 +679,7 @@ nav.sticky .logo-topnav {
     height: 100%;
     z-index: 10;
     transform: rotate(90deg);
-    top: 25%;
+    top: 23%;
     right: -34%;
     font-size: 15px;
     margin: 0 auto;
@@ -1214,6 +1217,9 @@ nav.sticky .logo-topnav {
   }
   img {
     width: 300px;
+  }
+  @media only screen and (max-width:600px) {
+    letter-spacing: 1px;
   }
 }
 

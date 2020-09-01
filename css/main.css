@@ -480,6 +480,9 @@ nav.sticky .logo-topnav {
     flex-direction: column;
     padding-left: 0em;
   }
+  .welcome-page-text-container .catch-phrase p {
+    padding-left: 0.4rem;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -550,7 +553,7 @@ nav.sticky .logo-topnav {
 @media only screen and (max-width: 600px) {
   .enter-btn-container .button {
     width: 250px;
-    height: 5vh;
+    height: auto;
     top: 25px;
     border: 1px solid #c1c1c1;
   }
@@ -748,7 +751,7 @@ nav.sticky .logo-topnav {
   height: 100%;
   z-index: 10;
   transform: rotate(90deg);
-  top: 25%;
+  top: 23%;
   right: -34%;
   font-size: 15px;
   margin: 0 auto;
@@ -1348,6 +1351,12 @@ nav.sticky .logo-topnav {
 
 .sponsors-container img {
   width: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .sponsors-container {
+    letter-spacing: 1px;
+  }
 }
 
 .footer-container {
