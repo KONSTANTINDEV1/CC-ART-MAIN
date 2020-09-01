@@ -447,7 +447,7 @@ nav.sticky .logo-topnav {
 
 .welcome-page-text-container .catch-phrase {
   display: flex;
-  font-family: "Peddana", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-style: 400;
   font-weight: normal;
   place-items: center;
@@ -502,7 +502,7 @@ nav.sticky .logo-topnav {
   place-items: center;
   text-align: center;
   border: 1.5px solid #c1c1c1;
-  font-family: "Peddana", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-style: normal;
   font-weight: normal;
   color: gray;
