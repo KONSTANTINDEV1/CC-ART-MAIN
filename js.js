@@ -31,7 +31,6 @@ tl.fromTo(
 );
 
 // AOS ANIMATIONS
-
 AOS.init({
   offset: 300, // offset (in px) from the original trigger point
   duration: 700, // values from 0 to 3000, with step 50ms
@@ -85,7 +84,6 @@ barba.init({
 
       async enter(data) {
         contentAnimation();
-        
       },
 
       async once(data) {
@@ -181,7 +179,7 @@ var swiper2 = new Swiper(".s2", {
   },
 });
 
-barba.hooks.beforeEnter(() => {
+barba.hooks.enter(() => {
   // this hook will be called during every transitions
   // before new page content enter…
 
@@ -193,17 +191,15 @@ barba.hooks.beforeEnter(() => {
       menuIcon.classList.toggle("active");
     }
     menuIcon.addEventListener("click", toggleMenuIcon);
-  });
-  $(document).ready(function () {
-    $(".sidebarBtn").click(function () {
-      $(".sidebar").toggleClass("active");
-    });
-    // AOS ANIMATIONS
-
     AOS.init({
       offset: 300, // offset (in px) from the original trigger point
       duration: 700, // values from 0 to 3000, with step 50ms
       easing: "ease", // default easing for AOS animations
+    });
+  });
+  $(document).ready(function () {
+    $(".sidebarBtn").click(function () {
+      $(".sidebar").toggleClass("active");
     });
   });
 
