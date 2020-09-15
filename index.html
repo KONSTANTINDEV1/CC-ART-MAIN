@@ -13,21 +13,34 @@
 </head>
 <!--PAGE TRANSITIONS BLOCK-->
 
-<body data-barba="wrapper">
+<body id="my-scrollbar" data-barba="wrapper">
   <div class="load-container">
     <div class="loading-screen">
       <img class="loading-screen-logo" src="/img/ccart.jpg" alt="" />
     </div>
   </div>
   <!--PAGE TRANSITIONS BLOCK-->
-  <main id="home" data-barba="container" data-barba-namespace="home-section">
+  <main id="home">
     <header>
       <nav class="navbar">
         <a href="/index.html"><img class="logo-topnav" src="./img/LOGO MAIN.svg" alt="logo" /></a>
         <div class="desktop-nav-links">
           <ul>
             <li><a href="./pages/about.html">ABOUT US</a></li>
-            <li><a href="./pages/collections.html">COLLECTIONS</a></li>
+            <li><a href="./pages/newpaintings.html">NEW PAINTINGS</a></li>
+            <li class="dropdown-menu" ><a href="./pages/collections.html">COLLECTIONS</a>
+              <ul class="dropdown-menu-links">
+                <li><a href="/pages/collection-cats.html">CATS</a></li>
+                <li><a href="/pages/collection-people.html">PEOPLE</a></li>
+                <li><a href="/pages/collection-portraits.html">PORTRAITS</a></li>
+                <li><a href="/pages/collection-flowers.html">FLOWERS</a></li>
+                <li><a href="/pages/collection-bottles.html">BOTTLES</a></li>
+                <li><a href="/pages/collection-landscapes.html">LANDSCAPES</a></li>
+              </ul>
+            </li>
+            <li><a href="./pages/projects.html">PROJECTS</a></li>
+            <li><a href="./pages/photography.html">PHOTOS</a></li>
+            <li><a href="./pages/diary.html">DIARY</a></li>
             <li><a href="./pages/contact.html">CONTACT</a></li>
           </ul>
         </div>
@@ -43,23 +56,21 @@
               <a href="./pages/newpaintings.html">New Paintings</a>
               <h4>New additions for viewing</h4>
             </li>
-            <li>
-              <a href="./pages/exhibitionwork.html">Exhibition Work</a>
-              <h4>Find out about Cristina’s previous showcases</h4>
-            </li>
             <li><a href="./pages/projects.html">Current Projects</a></li>
             <li>
-              <a href="./pages/onsale.html">On Sale</a>
+              <a href="./pages/forsale.html">For Sale</a>
               <h4>View a stunning selection of original works for sale</h4>
             </li>
             <div class="line-devider"></div>
             <li><a href="./pages/about.html">About Us</a></li>
-            <li><a href="./pages/diary.html">Diary</a></li>
+            <li><a href="./pages/diary.html">Diary</a>
+              <h4>Past and upcoming showcases</h4>
+            </li>
             <li><a href="./pages/contact.html">Contact</a></li>
             <div class="socials-nav">
-              <i class="fab fa-instagram"></i>
-              <i class="far fa-envelope"></i>
-              <i class="fab fa-facebook-square"></i>
+             <a href="https://www.instagram.com/cristinavendelsen/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+             <a href=""><i class="far fa-envelope"></i></a> 
+             <a href="https://www.facebook.com/gallericcart" target="_blank"><i class="fab fa-facebook-square"></i></a> 
             </div>
           </ul>
         </div>
@@ -117,12 +128,6 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide slide3">
-              <h1>ON SALE</h1>
-              <a href="./pages/onsale.html">
-                <div class="discover-more">DISCOVER MORE</div>
-              </a>
-            </div>
             <div class="swiper-slide slide2">
               <h1>EXHIBITION WORK</h1>
               <a href="./pages/exhibitionwork.html">
@@ -132,6 +137,12 @@
             <div class="swiper-slide slide4">
               <h1>CAMELIA CREATIVE COLLECTIONS</h1>
               <a href="./pages/collections.html">
+                <div class="discover-more">DISCOVER MORE</div>
+              </a>
+            </div>
+            <div class="swiper-slide slide3">
+              <h1>DIARY</h1>
+              <a href="./pages/diary.html">
                 <div class="discover-more">DISCOVER MORE</div>
               </a>
             </div>
@@ -150,25 +161,22 @@
         <ul class="collections text-wrapper">
           <h1 data-aos="fade-left">COLLECTIONS</h1>
           <p data-aos="fade-up">
-            The CC ART collections combine disparate sources of inspiration
+            CC ART collections combine new found sources of inspiration from all eras
             and artistic codes, reinterpreting them with a contemporary slant.
-            The aim is to create a design that places as much emphasis on
-            aesthetics as it does on the use and concept of a project.
+            You can view each individual collection via the naviagation slider above or from the main menu.
           </p>
         </ul>
-        <main>
           <div class="img-side-left" data-aos="fade-right" >
-            <img class="thumbnail" src="/img/LANDSCAPE IMAGE.png" alt="image" />
+            <img class="thumbnail" src="/img/LANDSCAPE-TULIPS.png" alt="image" />
             <div class="img-border"></div>
             <h4>PROFESSIONALS</h4>
           </div>
-
           <ul class="collections text-wrapper">
             <h1 data-aos="fade-left">A PROJECT PARTNER</h1>
             <div data-aos="fade-up">
               <p>
-                All Cristina’s products are 100% custom-made and designed to give
-                a unique and personal feel to any room. Size, design and colour
+                All Cristina’s paintings are 100% custom-made and designed to capture
+                a unique emotion and personal feel. Size, design and colour
                 can all be adapted to complement the space. This gives customers
                 an infinite array of decorative solutions to capture the feel of
                 their project.
@@ -186,43 +194,43 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="overflow">
-                    <img class="zoom-img" src="../img/IMG_3394.jpg" alt="" />
+                    <img class="zoom-img" src="https://study-eu.s3.amazonaws.com/uploads/image/path/371/wide_fullhd_norway-oslo-castle-statue.jpg" alt="" />
                   </div>
                   <h2>
-                    CREATIVE PROJECT DESIGNS
+                   UNIVERSITY OF OSLO
                     <hr />
                   </h2>
-                  <h4>Thinking outside the box</h4>
+                  <h4>Painting Course</h4>
                 </div>
                 <div class="swiper-slide">
                   <div class="overflow">
                     <img class="zoom-img" src="../img/IMG_3510.jpg" alt="" />
                   </div>
                   <h2>
-                    CREATIVE PROJECT DESIGNS
+                    EXHIBITION NES KOM
                     <hr />
                   </h2>
-                  <h4>Thinking outside the box</h4>
+                  <h4>To be anounced</h4>
                 </div>
                 <div class="swiper-slide">
                   <div class="overflow">
                     <img class="zoom-img" src="../img/MVIMG_20191228_130931-01.jpeg" alt="" />
                   </div>
                   <h2>
-                    CREATIVE PROJECT DESIGNS
+                    BLACK AND WHITE STUDIES
                     <hr />
                   </h2>
-                  <h4>Thinking outside the box</h4>
+                  <h4>Concept Art Work</h4>
                 </div>
                 <div class="swiper-slide">
                   <div class="overflow">
                     <img class="zoom-img" src="../img/IMG_3394.jpg" alt="" />
                   </div>
                   <h2>
-                    CREATIVE PROJECT DESIGNS
+                    PROJECT ADVICE 
                     <hr />
                   </h2>
-                  <h4>Thinking outside the box</h4>
+                  <h4>Need help with your project?</h4>
                 </div>
               </div>
             </div>
@@ -245,7 +253,10 @@
           </ul>
           <div class="sponsors-container">
             <h1>SPONSORS OF GALLERI CC ART</h1>
-            <img class="sponsors-img" src="/img/sponsors/neskom_logo_stor.jpg" alt="">
+            <div class="sponsors-img-container">
+              <img class="neskom sponsors-img" src="/img/sponsors/neskom_logo_stor.jpg" alt="">
+              <img class=" sponsors-img" src="/img/sponsors/Kvalitet.png" alt="">
+            </div>
           </div>
         </main>
     </section>
@@ -297,10 +308,10 @@
             <div class="footerlinks-item">
               <ul>
                 <h3>FOLLOW US</h3>
-                <a href="">
+                <a href="https://www.instagram.com/cristinavendelsen/?hl=en">
                   <li>Instagram</li>
                 </a>
-                <a href="">
+                <a href="https://www.facebook.com/gallericcart">
                   <li>Facebook</li>
                 </a>
                 <a href="">
@@ -321,28 +332,28 @@
           </div>
           <div class="socials-nav footer-links-bottom">
             <div class="copyright">Ⓒ KONSTANTINDEV 2020 CC ART SKOGBYDA</div>
-            <i class="fab fa-instagram"></i>
-            <i class="far fa-envelope"></i>
-            <i class="fab fa-facebook-square"></i>
+           <a href="https://www.instagram.com/cristinavendelsen/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a> 
+           <a href=""><i class="far fa-envelope"></i></a> 
+           <a href="https://www.facebook.com/gallericcart" target="_blank"><i class="fab fa-facebook-square"></i></a> 
           </div>
         </div>
       </div>
     </footer>
-  </main>
+
 
   <!-- Swiper JS -->
   <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.umd.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
     integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="/js.js"></script>
+  <script type="module" src="/js.js"></script>
   <script>AOS.init({
-    offset: 300, // offset (in px) from the original trigger point
+    offset: 100, // offset (in px) from the original trigger point
     duration: 700, // values from 0 to 3000, with step 50ms
     easing: "ease", // default easing for AOS animations
   });</script>
+  
 </body>
 
 </html>

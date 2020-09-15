@@ -1,3 +1,11 @@
+// //--- SMOOTH SCROLL BAR ---//
+
+// import Scrollbar from "smooth-scrollbar";
+
+// var options = {
+//   daping: 0.2,
+// };
+// Scrollbar.init(document.querySelector("#my-scrollbar", options));
 //--- MENU BUTTON ---//
 const menuIcon = document.querySelector(".menu-icon");
 
@@ -30,68 +38,13 @@ tl.fromTo(
   { opacity: "1", ease: Power2.easeInOut }
 );
 
-// AOS ANIMATIONS
-AOS.init({
-  offset: 300, // offset (in px) from the original trigger point
-  duration: 700, // values from 0 to 3000, with step 50ms
-  easing: "ease", // default easing for AOS animations
-});
+gsap.from(".row", { opacity: 0,delay:0.5, duration: 1.2, y: 60 });
+gsap.from(".collections-wrapper", { opacity: 0, duration: 1.2, y: 60 });
+gsap.from(".collections-page-text", { opacity: 0, duration: 1.2, x: 60 });
+gsap.from(".desktop-nav-links", { opacity: 0,delay:0.5, duration: 1.2, x: 60 });
+gsap.from(".logo-topnav", { opacity: 0,delay:0.5, duration: 1.5, x: -60, });
 
-// BARBA
-function delay(n) {
-  n = n || 2000;
-  return new Promise((done) => {
-    setTimeout(() => {
-      done();
-    }, n);
-  });
-}
 
-function pageTransition() {
-  var tl = gsap.timeline();
-  tl.to(".loading-screen", {
-    duration: 1.2,
-    width: "100%",
-    left: "0%",
-    ease: "Expo.easeInOut",
-  });
-
-  tl.to(".loading-screen", {
-    duration: 1,
-    width: "100%",
-    left: "-100%",
-    ease: "Expo.easeInOut",
-    delay: 1.5,
-  });
-  tl.set(".loading-screen", { left: "-100%" });
-}
-
-function contentAnimation() {
-  var tl = gsap.timeline();
-}
-
-barba.init({
-  sync: true,
-  transitions: [
-    {
-      async leave(data) {
-        const done = this.async();
-
-        pageTransition();
-        await delay(1500);
-        done();
-      },
-
-      async enter(data) {
-        contentAnimation();
-      },
-
-      async once(data) {
-        contentAnimation();
-      },
-    },
-  ],
-});
 
 //--- CAROUSEL ---//
 
@@ -177,125 +130,4 @@ var swiper2 = new Swiper(".s2", {
       autoResize: true,
     },
   },
-});
-
-barba.hooks.enter(() => {
-  // this hook will be called during every transitions
-  // before new page content enter…
-
-  $(document).ready(function () {
-    window.scrollTo(0, 0);
-    const menuIcon = document.querySelector(".menu-icon");
-
-    function toggleMenuIcon() {
-      menuIcon.classList.toggle("active");
-    }
-    menuIcon.addEventListener("click", toggleMenuIcon);
-    AOS.init({
-      offset: 300, // offset (in px) from the original trigger point
-      duration: 700, // values from 0 to 3000, with step 50ms
-      easing: "ease", // default easing for AOS animations
-    });
-  });
-  $(document).ready(function () {
-    $(".sidebarBtn").click(function () {
-      $(".sidebar").toggleClass("active");
-    });
-  });
-
-  // GSAP ANIMATION
-  const welcomeText = document.querySelector(".content-wrap");
-  const tl = new TimelineMax();
-
-  tl.fromTo(
-    welcomeText,
-    2.3,
-    { opacity: "0" },
-    { opacity: "1", ease: Power2.easeInOut }
-  );
-
-  //--- CAROUSEL ---//
-
-  //-- Initialize Swiper
-  var swiper = new Swiper(".s1", {
-    loop: false,
-    grabCursor: true,
-    spaceBetween: 100,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    // Responsive breakpoints
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        autoResize: true,
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        autoResize: true,
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 40,
-        autoResize: true,
-      },
-    },
-  });
-
-  var swiper2 = new Swiper(".s2", {
-    zoom: {
-      maxRatio: 5,
-    },
-    grabCursor: true,
-    freeMode: true,
-    // autoplay: true,
-    followFinger: true,
-
-    // Responsive breakpoints
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        autoResize: true,
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        autoResize: true,
-      },
-      // when window width is >= 640px
-      760: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-        autoResize: true,
-      },
-      1000: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-        autoResize: true,
-      },
-      1440: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-        autoResize: true,
-      },
-      1800: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-        autoResize: true,
-      },
-    },
-  });
 });

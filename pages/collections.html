@@ -28,47 +28,76 @@
       <section id="about-page" class="section">
         <header>
           <nav class="navbar">
-            <a href="/index.html"
+            <a href="../index.html"
               ><img class="logo-topnav" src="../img/LOGO MAIN.svg" alt="logo"
             /></a>
             <div class="desktop-nav-links">
               <ul>
                 <li><a href="../pages/about.html">ABOUT US</a></li>
-                <li><a href="../pages/collections.html">COLLECTIONS</a></li>
+                <li><a href="../pages/newpaintings.html">NEW PAINTINGS</a></li>
+                <li class=" current-page dropdown-menu">
+                  <a href="../pages/collections.html">COLLECTIONS</a>
+                  <ul class="dropdown-menu-links">
+                    <li><a href="/pages/collection-cats.html">CATS</a></li>
+                    <li><a href="/pages/collection-people.html">PEOPLE</a></li>
+                    <li>
+                      <a href="/pages/collection-portraits.html">PORTRAITS</a>
+                    </li>
+                    <li>
+                      <a href="/pages/collection-flowers.html">FLOWERS</a>
+                    </li>
+                    <li>
+                      <a href="/pages/collection-bottles.html">BOTTLES</a>
+                    </li>
+                    <li>
+                      <a href="/pages/collection-landscapes.html">LANDSCAPES</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="../pages/projects.html">PROJECTS</a></li>
+                <li><a href="../pages/photography.html">PHOTOS</a></li>
+                <li><a href="../pages/diary.html">DIARY</a></li>
                 <li><a href="../pages/contact.html">CONTACT</a></li>
               </ul>
             </div>
             <div class="sidebar topNav">
               <ul>
-                <a href="/index.html"
+                <a href="../index.html"
                   ><img class="logo" src="../img/LOGO MAIN.svg" alt="logo"
                 /></a>
                 <h2><a href="../index.html">GALLERY CC ART</a></h2>
                 <li>
-                  <a href="/pages/collections.html">Creative Collections</a>
+                  <a href="../pages/collections.html">Creative Collections</a>
                   <h4>Cristina's Creative Art Collections</h4>
                 </li>
                 <li>
-                  <a href="/pages/newpaintings.html">New Paintings</a>
+                  <a href="../pages/newpaintings.html">New Paintings</a>
                   <h4>New additions for viewing</h4>
-                </li>
-                <li>
-                  <a href="../pages/exhibitionwork.html">Exhibition Work</a>
-                  <h4>Find out about Cristina’s previous showcases</h4>
                 </li>
                 <li><a href="../pages/projects.html">Current Projects</a></li>
                 <li>
-                  <a href="../pages/onsale.html">On Sale</a>
+                  <a href="../pages/forsale.html">For Sale</a>
                   <h4>View a stunning selection of original works for sale</h4>
                 </li>
                 <div class="line-devider"></div>
                 <li><a href="../pages/about.html">About Us</a></li>
-                <li><a href="">Diary</a></li>
+                <li>
+                  <a href="../pages/diary.html">Diary</a>
+                  <h4>Past and upcoming showcases</h4>
+                </li>
                 <li><a href="../pages/contact.html">Contact</a></li>
                 <div class="socials-nav">
-                  <i class="fab fa-instagram"></i>
-                  <i class="far fa-envelope"></i>
-                  <i class="fab fa-facebook-square"></i>
+                  <a
+                    href="https://www.instagram.com/cristinavendelsen/?hl=en"
+                    target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href=""><i class="far fa-envelope"></i></a>
+                  <a
+                    href="htt.ps://www.facebook.com/gallericcart"
+                    target="_blank"
+                    ><i class="fab fa-facebook-square"></i
+                  ></a>
                 </div>
               </ul>
             </div>
@@ -81,7 +110,7 @@
         </header>
         <main>
           <div class="collections-page-text text-wrapper">
-            <h2>Camelia Creative</h2>
+            <h2>Cristina Creative</h2>
             <h1>COLLECTIONS X</h1>
             <p>
               Cristina’s Collections is a new take on the themes of our external
@@ -104,7 +133,7 @@
                 <a href="./collection-cats.html"
                   ><img
                     style="object-position: top center"
-                    src="/img/Cats.jpeg"
+                    src="/img/CROPPED-PAINTINGS/CROPPED CATS/Cats2.jpg"
                     alt=""
                 /></a>
               </div>
@@ -136,7 +165,7 @@
             <div class="collection-items">
               <div class="overflow">
                 <a href="./collection-flowers.html"
-                  ><img src="/img/People7.jpeg" alt=""
+                  ><img src="/img/CROPPED-PAINTINGS/CROPPED FLOWERS/red-rose.png" alt=""
                 /></a>
               </div>
               <h2>FLOWERS</h2>
@@ -146,7 +175,7 @@
                 <a href="../pages/collection-bottles.html"
                   ><img
                     style="object-position: bottom center"
-                    src="/img/Bottles.jpeg"
+                    src="/img/CROPPED-PAINTINGS/CROPPED BOTTLES/bottle-yellowbackground.png"
                     alt=""
                 /></a>
               </div>
@@ -156,8 +185,8 @@
               <div class="overflow">
                 <a href="./collection-landscapes.html"
                   ><img
-                    style="object-position: top"
-                    src="/img/Landscape2.jpeg"
+                    style="object-position: bottom center"
+                    src="/img/CROPPED-PAINTINGS/CROPPED LANDSCAPE/landscape-coffee.png"
                     alt=""
                 /></a>
               </div>
@@ -338,12 +367,19 @@
         </div>
       </footer>
     </main>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/@barba/core"></script>
     <script
+      type="text/javascript"
+      src="https://unpkg.com/swiper/swiper-bundle.js"
+    ></script>
+    <script
+      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
       integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
       crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
     ></script>
     <script src="/js.js"></script>
   </body>

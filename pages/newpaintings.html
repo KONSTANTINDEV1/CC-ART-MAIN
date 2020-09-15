@@ -28,47 +28,78 @@
       <section id="about-page" class="section">
         <header>
           <nav class="navbar">
-            <a href="/index.html"
+            <a href="../index.html"
               ><img class="logo-topnav" src="../img/LOGO MAIN.svg" alt="logo"
             /></a>
             <div class="desktop-nav-links">
               <ul>
                 <li><a href="../pages/about.html">ABOUT US</a></li>
-                <li><a href="../pages/collections.html">COLLECTIONS</a></li>
+                <li class="current-page">
+                  <a href="../pages/newpaintings.html">NEW PAINTINGS</a>
+                </li>
+                <li class="dropdown-menu">
+                  <a href="../pages/collections.html">COLLECTIONS</a>
+                  <ul class="dropdown-menu-links">
+                    <li><a href="/pages/collection-cats.html">CATS</a></li>
+                    <li><a href="/pages/collection-people.html">PEOPLE</a></li>
+                    <li>
+                      <a href="/pages/collection-portraits.html">PORTRAITS</a>
+                    </li>
+                    <li>
+                      <a href="/pages/collection-flowers.html">FLOWERS</a>
+                    </li>
+                    <li>
+                      <a href="/pages/collection-bottles.html">BOTTLES</a>
+                    </li>
+                    <li>
+                      <a href="/pages/collection-landscapes.html">LANDSCAPES</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="../pages/projects.html">PROJECTS</a></li>
+                <li><a href="../pages/photography.html">PHOTOS</a></li>
+                <li><a href="../pages/diary.html">DIARY</a></li>
                 <li><a href="../pages/contact.html">CONTACT</a></li>
               </ul>
             </div>
             <div class="sidebar topNav">
               <ul>
-                <a href="/index.html"
+                <a href="../index.html"
                   ><img class="logo" src="../img/LOGO MAIN.svg" alt="logo"
                 /></a>
                 <h2><a href="../index.html">GALLERY CC ART</a></h2>
                 <li>
-                  <a href="/pages/collections.html">Creative Collections</a>
+                  <a href="../pages/collections.html">Creative Collections</a>
                   <h4>Cristina's Creative Art Collections</h4>
                 </li>
                 <li>
-                  <a href="/pages/newpaintings.html">New Paintings</a>
+                  <a href="../pages/newpaintings.html">New Paintings</a>
                   <h4>New additions for viewing</h4>
-                </li>
-                <li>
-                  <a href="../pages/exhibitionwork.html">Exhibition Work</a>
-                  <h4>Find out about Cristina’s previous showcases</h4>
                 </li>
                 <li><a href="../pages/projects.html">Current Projects</a></li>
                 <li>
-                  <a href="../pages/onsale.html">On Sale</a>
+                  <a href="../pages/forsale.html">For Sale</a>
                   <h4>View a stunning selection of original works for sale</h4>
                 </li>
                 <div class="line-devider"></div>
                 <li><a href="../pages/about.html">About Us</a></li>
-                <li><a href="../pages/diary.html">Diary</a></li>
+                <li>
+                  <a href="../pages/diary.html">Diary</a>
+                  <h4>Past and upcoming showcases</h4>
+                </li>
                 <li><a href="../pages/contact.html">Contact</a></li>
                 <div class="socials-nav">
-                  <i class="fab fa-instagram"></i>
-                  <i class="far fa-envelope"></i>
-                  <i class="fab fa-facebook-square"></i>
+                  <a
+                    href="https://www.instagram.com/cristinavendelsen/?hl=en"
+                    target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href=""><i class="far fa-envelope"></i></a>
+                  <a
+                    href="htt.ps://www.facebook.com/gallericcart"
+                    target="_blank"
+                    ><i class="fab fa-facebook-square"></i
+                  ></a>
                 </div>
               </ul>
             </div>
@@ -80,6 +111,11 @@
           </nav>
         </header>
         <main>
+          <!-- IMG MODAL-->
+          <div class="outer-modal">
+            <div class="inner-modal"></div>
+          </div>
+          <!-- IMG MODAL-->
           <div class="collections-page-text text-wrapper">
             <h2>New Paintings</h2>
             <h1>COLLECCTIONS TO COME</h1>
@@ -98,42 +134,92 @@
               changeable reflections and refractions within the spaces.
             </p>
           </div>
-          <div class="single-collection-img-container">
-            <img src="/img/EDITED PAINTINGS/FOR SALE/B&W for sale.png" alt="" />
-            <div>
-              <h1>MISTERY</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                voluptatem molestiae omnis accusantium ad ab distinctio vero
-                laborum dignissimos sint adipisci eaque asperiores quod
-                veritatis hic, debitis vitae nostrum quasi.Nulla illo ab amet
-                sint ipsa, non saepe magnam nisi doloribus, dolores dicta, sed
-                consequuntur. Architecto error nesciunt maxime eveniet. Maxime
-                illum sed quibusdam suscipit delectus magnam amet veniam
-                architecto?
-              </p>
+          <article class="row">
+            <div class="column">
+              <div>
+                <div
+                  class="single-collection-item-container"
+                  data-aos="fade-left"
+                  data-description="Beautiful people"
+                >
+                  <img
+                    class="img-modal"
+                    src="/img/black&white-paintings/black&white-new.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div>
+                <div
+                  class="single-collection-item-container"
+                  data-aos="fade-right"
+                  data-description="Beautiful people"
+                >
+                  <img
+                    class="img-modal"
+                    style="object-position: bottom"
+                    src="/img/CROPPED-PAINTINGS/CROPPED FLOWERS/pale-tulips.png"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="single-collection-item-container"
+                  data-aos="fade-right"
+                  data-description="Beautiful people"
+                >
+                  <img
+                    class="img-modal"
+                    style="object-position: bottom"
+                    src="/img/CROPPED-PAINTINGS/CROPPED FLOWERS/blue-tulips.png"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="single-collection-img-container">
-            <img
-              style="object-position: bottom"
-              src="/img/EDITED PAINTINGS/FOR SALE/B&W for sale2.png"
-              alt=""
-            />
-            <div>
-              <h1>THOUGHT FORMS</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                voluptatem molestiae omnis accusantium ad ab distinctio vero
-                laborum dignissimos sint adipisci eaque asperiores quod
-                veritatis hic, debitis vitae nostrum quasi.Nulla illo ab amet
-                sint ipsa, non saepe magnam nisi doloribus, dolores dicta, sed
-                consequuntur. Architecto error nesciunt maxime eveniet. Maxime
-                illum sed quibusdam suscipit delectus magnam amet veniam
-                architecto?
-              </p>
+            <div class="column">
+              <div>
+                <div
+                  class="single-collection-item-container"
+                  data-aos="fade-left"
+                  data-description="Beautiful people"
+                >
+                  <img
+                    class="img-modal"
+                    style="object-position: bottom"
+                    src="/img/black&white-paintings/black&white-new2SM.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div>
+                <div
+                  class="single-collection-item-container"
+                  data-aos="fade-left"
+                  data-description="Beautiful people"
+                >
+                  <img
+                    class="img-modal"
+                    style="object-position: bottom"
+                    src="/img/CROPPED-PAINTINGS/CROPPED-PORTRAITS/portrait-aunt.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div>
+                <div
+                  class="single-collection-item-container"
+                  data-aos="fade-right"
+                  data-description="Beautiful people"
+                >
+                  <img
+                    class="img-modal"
+                    src="/img/CROPPED-PAINTINGS/CROPPED FLOWERS/black-tulips.png"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
-          </div>
+          </article>
 
           <ul class="collections text-wrapper">
             <h1>COLLECTIONS</h1>
@@ -145,7 +231,8 @@
             </p>
           </ul>
           <div class="img-side-left">
-            <img src="../img/People6.jpg" alt="" />
+            <img src="../img/LANDSCAPE-TULIPS.png" alt="" />
+            <div class="img-border"></div>
             <h4>PROFESSIONALS</h4>
           </div>
           <ul class="collections text-wrapper">
@@ -309,12 +396,12 @@
     </main>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
       integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
       crossorigin="anonymous"
     ></script>
     <script src="/js.js"></script>
+    <script src="/modal.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 @font-face {
   src: url(/fonts/times-new-roman.ttf);
   font-family: Times;
@@ -50,7 +50,7 @@ section {
   height: 100vh;
   width: 100vw;
   @media only screen and (min-width: 1000px) {
-    margin-top: 70px;
+    margin-top: 115px;
   }
   @media only screen and (max-width: 700px) {
     background-image: url(/img/forest-full.svg);
@@ -72,22 +72,65 @@ section {
   place-items: center;
   width: 100vw;
   background: transparent;
+
   .desktop-nav-links {
+    position: relative;
+    z-index: 99;
     width: 100%;
     ul {
       display: flex;
       justify-content: flex-end;
-      padding: 20px 16px;
     }
     ul li a {
-      padding: 10px 20px;
+      padding: 24px 20px;
       color: gray;
       font-size: 20px;
-      display: block;
       transition: color 0.3s ease;
       font-family: var(--lrgtitle-font-family);
       &:hover {
         color: black;
+      }
+    }
+    .dropdown-menu {
+      i {
+        position: relative;
+        left: 7px;
+        font-size: 18px;
+      }
+      .dropdown-menu-links {
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        background-color: white;
+        padding: 10px 0;
+        padding-bottom: 10px;
+        border-radius: 0px 0px 8px 8px;
+        transform: translateY(-2rem);
+        transition: all 0.5s ease;
+        opacity: 0;
+
+        a {
+          padding: 10px 20px;
+        }
+
+        li {
+          &:hover {
+            transition: background-color 0.5s ease;
+            background-color: #f2f2f2;
+          }
+        }
+      }
+
+      &:hover {
+        ul {
+          visibility: visible;
+          transition: 0.5s ease;
+          transform: translateY(0rem);
+          opacity: 1;
+        }
       }
     }
   }
@@ -107,18 +150,20 @@ section {
     }
   }
 }
+
+.current-page {
+  text-decoration: underline;
+}
 .logo,
 .logo-topnav {
   width: 165px;
   padding: 5px 0;
-  opacity: 0;
-  @media only screen and (min-width: 1000px) {
-    opacity: 1;
-  }
+
   @media only screen and (max-width: 600px) {
     width: 135px;
     position: relative;
     top: 2px;
+    display: none;
   }
   @media only screen and (max-width: 320px) {
     width: 107px;
@@ -144,8 +189,10 @@ section {
   }
 }
 
-nav.sticky .logo-topnav {
-  opacity: 1;
+.sticky {
+  .logo-topnav {
+    display: block;
+  }
 }
 
 .menu-icon {
@@ -206,7 +253,8 @@ nav.sticky .logo-topnav {
     width: 35px;
     justify-self: end;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (min-width: 1200px) {
+    display: none;
   }
   @media only screen and (max-width: 600px) {
     padding-right: 0;
@@ -310,6 +358,10 @@ nav.sticky .logo-topnav {
     }
   }
 
+  a {
+    color: inherit;
+  }
+
   @media only screen and (max-width: 320px) {
     h2 {
       padding-left: 10%;
@@ -375,9 +427,6 @@ nav.sticky .logo-topnav {
     &:hover {
       color: black;
     }
-  }
-  @media only screen and (min-width: 1000px) {
-    display: block !important;
   }
 }
 
@@ -601,7 +650,7 @@ nav.sticky .logo-topnav {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     color: inherit;
-    transition: 0.5s ease;
+    transition: color 0.5s;
     // -webkit-font-smoothing: antialiased;
     &:hover {
       background-color: black;
@@ -616,7 +665,7 @@ nav.sticky .logo-topnav {
   flex-direction: column;
   place-items: center;
   width: 100vw;
-  padding-top: 80px;
+  padding-top: 150px;
   margin-bottom: -10px;
 
   h1 {
@@ -661,13 +710,13 @@ nav.sticky .logo-topnav {
   max-height: 900px;
   overflow: hidden;
   padding: 10% 0;
-  margin: 30px 0;
+  margin: 40px 0;
 
   img {
     position: relative;
     bottom: 0;
     left: 0;
-    width: 85%;
+    width: 100%;
     height: auto;
     object-fit: cover;
   }
@@ -684,39 +733,39 @@ nav.sticky .logo-topnav {
     height: 100%;
     z-index: 10;
     transform: rotate(90deg);
-    top: 23%;
-    right: -34%;
+    top: 35%;
+    right: -47%;
+    color: white;
     font-size: 15px;
     margin: 0 auto;
   }
-  @media only screen and (max-width: 1650px) {
-    max-height: 680px;
-  }
-  @media only screen and (max-width: 1439px) {
-    max-height: 600px;
-  }
-  @media only screen and (min-width: 1400px) {
-    img {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  }
+
   @media only screen and (max-width: 600px) {
-    margin: -40px 0px;
+    h4 {
+      font-size: 12px;
+      top: 23%;
+      right: -34%;
+    }
+    // margin: -40px 0px;
   }
   @media only screen and (max-width: 320px) {
+    h4 {
+      font-size: 12px;
+      top: 20%;
+      right: -37%;
+    }
     margin: 0px 0px;
   }
 }
 .img-border {
   position: absolute;
   place-items: center;
-  width: 80%;
-  left: 2%;
+  width: 95%;
+  left: 3%;
   box-sizing: border-box;
-  border: 0.3vw solid rgb(255, 255, 255);
+  border: 0.3vw solid rgba(255, 255, 255, 0.842);
   padding: 400px 0;
+  display: none;
 }
 .img-side-right {
   margin: 0 auto;
@@ -729,7 +778,7 @@ nav.sticky .logo-topnav {
   max-height: 900px;
   overflow: hidden;
   padding: 10% 0;
-  margin: 30px 0;
+  margin: 150px 0;
 
   img {
     position: relative;
@@ -738,6 +787,7 @@ nav.sticky .logo-topnav {
     width: 85%;
     height: auto;
     object-fit: cover;
+    object-position: center;
   }
   h4 {
     font-family: "Lato", serif;
@@ -753,9 +803,12 @@ nav.sticky .logo-topnav {
     z-index: 10;
     transform: rotate(-90deg);
     top: 23%;
-    left: -33%;
+    left: -34%;
     font-size: 15px;
     margin: 0 auto;
+  }
+  .img-border {
+    left: 18%;
   }
 }
 
@@ -778,6 +831,12 @@ nav.sticky .logo-topnav {
     font-size: 15px;
     line-height: 1.73;
   }
+  @media only screen and (min-width: 1200px) {
+    // margin-bottom: 100px;
+  }
+  @media only screen and (max-width:600px){
+    padding-top: 15px;
+  }
 }
 
 .projects {
@@ -786,9 +845,10 @@ nav.sticky .logo-topnav {
     margin-top: -60px;
   }
   @media only screen and (max-width: 600px) {
-    margin-top: -50px;
+    margin-top: -34px;
   }
   @media only screen and (max-width: 320px) {
+    margin-top: -10px;
   }
 }
 .explore-container {
@@ -833,6 +893,19 @@ nav.sticky .logo-topnav {
     padding-bottom: 40px;
   }
 }
+
+.press-img-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8%;
+  // flex-direction: column;
+  justify-content: center;
+
+  img {
+    width: 80%;
+  }
+}
 //--- CAROUSEL ---//
 .swiper-container {
   margin-top: 50px;
@@ -842,14 +915,21 @@ nav.sticky .logo-topnav {
   margin-bottom: 200px;
   overflow: visible;
   // background-color: whitesmoke;
+
   @media only screen and (max-width: 600px) {
     height: 450px;
     width: 85vw;
+    margin-bottom: 267px;
   }
   @media only screen and (max-width: 320px) {
     margin-right: 20px;
     height: 350px;
     width: 85vw;
+  }
+}
+.s1 {
+  @media only screen and (min-width: 1200px) {
+    margin-bottom: 300px;
   }
 }
 
@@ -898,7 +978,7 @@ nav.sticky .logo-topnav {
 }
 
 .slide3 {
-  background-image: url(/img/Adjustments.jpg);
+  background-image: url(https://www.fjordtravel.no/wp-content/uploads/2013/09/UNESCO-Naeroyfjord-by-Terese-Kvinge.jpg);
   background-size: cover;
 }
 
@@ -1109,6 +1189,7 @@ nav.sticky .logo-topnav {
     .overflow {
       overflow: hidden;
     }
+
     @media only screen and (max-width: 600px) {
       height: 500px;
 
@@ -1139,35 +1220,34 @@ nav.sticky .logo-topnav {
         margin: 4px 0;
       }
     }
-  }
-  
-  @media only screen and (max-width: 320px) {
-    height: 400px;
-    h2 {
-      top: 98%;
-      padding: 20px;
-      font-size: 11px;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
-    }
+    @media only screen and (max-width: 320px) {
+      height: 400px;
+      h2 {
+        top: 98%;
+        padding: 20px;
+        font-size: 11px;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+      }
 
-    h4 {
-      color: gray;
-      font-size: 11px;
-      font-family: "Lato", sans-serif;
-      font-weight: 400;
-      position: relative;
-      padding-top: 5px;
-      top: 7%;
-    }
+      h4 {
+        color: gray;
+        font-size: 11px;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        position: relative;
+        padding-top: 5px;
+        top: 7%;
+      }
 
-    hr {
-      box-sizing: border-box;
-      height: 0;
-      border-top-width: 1px;
-      border-color: black;
-      width: 20px;
-      margin: 4px 0;
+      hr {
+        box-sizing: border-box;
+        height: 0;
+        border-top-width: 1px;
+        border-color: black;
+        width: 20px;
+        margin: 4px 0;
+      }
     }
   }
 }
@@ -1211,7 +1291,7 @@ nav.sticky .logo-topnav {
   justify-content: center;
   place-items: center;
   width: 100%;
-  padding: 100px 0;
+  padding: 40px 0;
   padding-bottom: 200px;
   h1 {
     font-family: "Lato", sans-serif;
@@ -1220,14 +1300,31 @@ nav.sticky .logo-topnav {
     letter-spacing: 3px;
     padding-bottom: 20px;
   }
+  .neskom {
+    width: 230px;
+  }
   img {
     width: 300px;
   }
   @media only screen and (max-width: 600px) {
     letter-spacing: 1px;
+    padding-bottom: 100px;
     h1 {
       font-size: 20px;
     }
+  }
+  @media only screen and (max-width: 320px) {
+    h1 {
+      font-size: 15px;
+    }
+  }
+}
+
+.sponsors-img-container {
+  place-items: center;
+  display: flex;
+  @media only screen and (max-width: 900px) {
+    flex-direction: column-reverse;
   }
 }
 
@@ -1244,7 +1341,7 @@ nav.sticky .logo-topnav {
 
   h1 {
     padding-top: 40px;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
     font-family: "Lato", sans-serif;
     font-weight: 700;
     padding-top: 50px;
@@ -1311,8 +1408,9 @@ nav.sticky .logo-topnav {
   }
 
   @media only screen and (max-width: 320px) {
-    grid-template-columns: repeat(auto-fill, minmax(0px, 100px));
+    grid-template-columns: repeat(auto-fill, minmax(0px, 120px));
     grid-auto-rows: minmax(200px, 2fr);
+    grid-gap: 3%;
   }
 }
 .copyright {
@@ -1326,8 +1424,8 @@ nav.sticky .logo-topnav {
   position: relative;
   display: flex;
   // place-items: center;
-  justify-content: center;
-  flex-direction: column;
+  // justify-content: center;
+  // flex-direction: column;
   // border: 4px solid rgba(245, 242, 242, 0.776);
   // background-color: black;
   flex: 1 1 300px;
@@ -1403,10 +1501,6 @@ nav.sticky .logo-topnav {
 
 //--- HOME PAGE START ---//
 #home {
-  .navbar .desktop-nav-links {
-    display: none;
-  }
-
   .about-text-container {
     display: flex;
     flex-direction: column;
@@ -1522,6 +1616,12 @@ nav.sticky .logo-topnav {
   .googlemaps-container {
     width: 100%;
     height: 100%;
+    @media only screen and (max-width: 1200px) {
+      height: 500px;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
   }
 }
 
@@ -1542,7 +1642,7 @@ nav.sticky .logo-topnav {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     grid-auto-rows: minmax(0px, 1fr);
     padding: 0 400px;
-    padding-bottom: 400px;
+    padding-bottom: 150px;
     grid-gap: 15% 5%;
     @media only screen and (max-width: 1850px) {
       grid-gap: 15% 5%;
@@ -1560,7 +1660,6 @@ nav.sticky .logo-topnav {
       padding: 0% 5%;
       padding-bottom: 0px;
     }
-
   }
   .collection-items {
     position: relative;
@@ -1579,6 +1678,7 @@ nav.sticky .logo-topnav {
       height: 100%;
       overflow: hidden;
     }
+
     h1 {
       font-family: "Lato", sans-serif;
       font-weight: 400;
@@ -1610,24 +1710,34 @@ nav.sticky .logo-topnav {
       }
     }
     @media only screen and (min-width: 1000px) {
-      margin-bottom: 90px;
+      margin-bottom: 550px;
       margin-right: 20px;
     }
     @media only screen and (max-width: 600px) {
       width: 80vw;
-      margin-bottom: 300px;
+      margin-bottom: 550px;
     }
     @media only screen and (max-width: 320px) {
       width: 100vw;
     }
   }
+  #norway-diary-text {
+    bottom: -550px;
+  }
   .collection-items-text {
     position: absolute;
-    bottom: -180px;
+    bottom: -228px;
+    width: 100%;
     @media only screen and (max-width: 700px) {
       bottom: -222px;
     }
   }
+}
+
+//--- PHOTOGRAPHY START ---//
+
+.comingsoon-img {
+  width: 100vw;
 }
 
 //--- ALL COLLECTIONS PAGE START ---//
@@ -1700,11 +1810,16 @@ nav.sticky .logo-topnav {
   width: 100%;
   padding-left: 10%;
   padding-right: 10%;
+  @media only screen and (max-width: 1400px) {
+    padding-bottom: 461px;
+  }
   @media only screen and (max-width: 600px) {
-    padding-bottom: 400px;
-    padding-left: 8%;
-    padding-right: 10%;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    // padding-left: 8%;
+    // padding-right: 10%;
+    // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-left: 0;
+    padding-right: 0;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   }
   @media only screen and (max-width: 320px) {
     padding-bottom: 400px;
@@ -1721,7 +1836,7 @@ nav.sticky .logo-topnav {
     border: 4px solid rgba(245, 242, 242, 0.776);
     // background-color: black;
     margin-bottom: 50px;
-    height: 320px;
+    height: 500px; //height: 320px;
     flex: 1 1 300px;
 
     .overflow {
@@ -1762,7 +1877,7 @@ nav.sticky .logo-topnav {
       margin-right: 20px;
     }
     @media only screen and (max-width: 600px) {
-      width: 80vw;
+      width: 100%;
     }
     @media only screen and (max-width: 320px) {
       width: 100vw;
@@ -1797,6 +1912,63 @@ nav.sticky .logo-topnav {
     font-weight: 600;
     // -webkit-font-smoothing: antialiased;
   }
+}
+
+//--- COLUMN GRID---//
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10%;
+  @media only screen and (max-width: 600px) {
+    padding: 0;
+  }
+}
+
+.column {
+  flex: 50%;
+  padding: 10px 8px;
+  width: 100%;
+  @media only screen and (max-width: 600px) {
+    flex: 100%;
+    padding: 0% 5%;
+  }
+}
+
+.column img {
+  margin-top: 15px;
+  width: 100%;
+  // height: 1000px;
+  vertical-align: middle;
+  @media only screen and (max-width: 600px) {
+    flex: 100%;
+    height: auto;
+    padding: 0;
+  }
+}
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10%;
+  @media only screen and (max-width: 600px) {
+    padding: 0 8%;
+  }
+}
+
+.column2 {
+  flex: 50%;
+  padding: 10px 4px;
+  width: 100%;
+  @media only screen and (max-width: 600px) {
+    flex: 100%;
+    padding: 0;
+  }
+}
+
+.column2 img {
+  margin-top: 8px;
+  width: 100%;
+  vertical-align: middle;
 }
 
 //--- BOTTLE COLLECTION PAGE START ---//
@@ -1836,11 +2008,59 @@ nav.sticky .logo-topnav {
     font-family: var(--lrgtitle-font-family);
     font-weight: 700;
   }
+
+  .banner-img-modal {
+    position: absolute;
+    bottom: 27%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: 600px) {
+      bottom: 25%;
+    }
+  }
+
+  .single-collection-item-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8%;
+    h4 {
+      font-size: 20px;
+      cursor: pointer;
+      transition: color 0.5s;
+
+      &:hover {
+        color: gray;
+      }
+    }
+    img {
+      display: none;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 0 4.5%;
+      h4 {
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    h1 {
+      display: none;
+    }
+    h2 {
+      display: none;
+    }
+    h3 {
+      display: none;
+    }
+  }
   @media only screen and (max-width: 700px) {
     margin-bottom: 100px;
     img {
       padding: 0;
-      height: 350px;
     }
     h1 {
       font-size: 11px;
@@ -1978,6 +2198,9 @@ nav.sticky .logo-topnav {
 
 .single-collection-item-container {
   display: flex;
+  img {
+    cursor: pointer;
+  }
   @media only screen and (max-width: 600px) {
     flex-direction: column;
   }
@@ -1986,5 +2209,113 @@ nav.sticky .logo-topnav {
 #bottle-collection-page {
   .collections {
     margin-top: -50;
+  }
+}
+
+//--- IMG MODAL ---//
+.outer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  background-color: rgba(34, 34, 34, 0.926);
+  transition: opacity 0.2s;
+  z-index: 99;
+  opacity: 0;
+
+  .inner-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: white;
+    z-index: 999999;
+    max-width: 1200px;
+    min-width: 200px;
+    transform: translateY(200px);
+    transition: 0.5s ease;
+    opacity: 0;
+    padding-right: 20%;
+    margin-left: 28%;
+    img {
+      width: 100%;
+    }
+    @media only screen and (max-width: 900px) {
+      flex-direction: column;
+      padding-bottom: 20px;
+      padding-right: 0;
+      margin-left: 0%;
+      margin-top: 20px;
+    }
+  }
+}
+
+.outer-modal.open {
+  opacity: 1;
+  pointer-events: all;
+  display: flex;
+  justify-content: center;
+}
+
+.outer-modal.open .inner-modal {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0px);
+
+  .modal-text {
+    width: 100%;
+    padding: 20px;
+    h2 {
+      left: 0;
+      right: 0;
+      padding-bottom: 20px;
+      margin: 0 auto;
+      font-family: "Lato";
+      font-weight: 700;
+      place-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 2;
+      padding-bottom: 20px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      width: 500px;
+    }
+
+    li a {
+      text-decoration: none;
+      position: relative;
+      display: flex;
+      place-items: center;
+      width: 100%;
+      color: inherit;
+      font-size: 20px;
+      transition: color 0.5s ease;
+      font-family: "Lato";
+      font-weight: 700;
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+
+  .single-collection-item-container {
+    img {
+      display: block;
+    }
   }
 }

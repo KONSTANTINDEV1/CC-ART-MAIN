@@ -16,33 +16,52 @@
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <!--PAGE TRANSITIONS BLOCK-->
-  <body data-barba="wrapper">
+  <body data-barba="wrapper" id="my-scrollbar">
     <div class="load-container">
       <div class="loading-screen">
         <img class="loading-screen-logo" src="/img/ccart.jpg" alt="" />
       </div>
     </div>
     <!--PAGE TRANSITIONS BLOCK-->
-    <main
-      data-barba="container"
-      data-barba-namespace="collection-cats-section"
-    >
+    <main>
       <section id="about-page" class="section">
         <header>
           <nav class="navbar">
-            <a href="/index.html"
+            <a href="../index.html"
               ><img class="logo-topnav" src="../img/LOGO MAIN.svg" alt="logo"
             /></a>
             <div class="desktop-nav-links">
               <ul>
                 <li><a href="../pages/about.html">ABOUT US</a></li>
-                <li><a href="../pages/collections.html">COLLECTIONS</a></li>
+                <li><a href="../pages/newpaintings.html">NEW PAINTINGS</a></li>
+                <li class="current-page dropdown-menu">
+                  <a href="../pages/collections.html">COLLECTIONS</a>
+                  <ul class="dropdown-menu-links">
+                    <li class="current-page"><a href="/pages/collection-cats.html">CATS</a></li>
+                    <li><a href="/pages/collection-people.html">PEOPLE</a></li>
+                    <li>
+                      <a href="/pages/collection-portraits.html">PORTRAITS</a>
+                    </li>
+                    <li>
+                      <a href="/pages/collection-flowers.html">FLOWERS</a>
+                    </li>
+                    <li>
+                      <a href="/pages/collection-bottles.html">BOTTLES</a>
+                    </li>
+                    <li>
+                      <a href="/pages/collection-landscapes.html">LANDSCAPES</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="../pages/projects.html">PROJECTS</a></li>
+                <li><a href="../pages/photography.html">PHOTOS</a></li>
+                <li><a href="../pages/diary.html">DIARY</a></li>
                 <li><a href="../pages/contact.html">CONTACT</a></li>
               </ul>
             </div>
             <div class="sidebar topNav">
               <ul>
-                <a href="/index.html"
+                <a href="../index.html"
                   ><img class="logo" src="../img/LOGO MAIN.svg" alt="logo"
                 /></a>
                 <h2><a href="../index.html">GALLERY CC ART</a></h2>
@@ -54,27 +73,33 @@
                   <a href="../pages/newpaintings.html">New Paintings</a>
                   <h4>New additions for viewing</h4>
                 </li>
-                <li>
-                  <a href="../pages/exhibitionwork.html">Exhibition Work</a>
-                  <h4>Find out about Cristina’s previous showcases</h4>
-                </li>
                 <li><a href="../pages/projects.html">Current Projects</a></li>
                 <li>
-                  <a href="../pages/onsale.html">On Sale</a>
+                  <a href="../pages/forsale.html">For Sale</a>
                   <h4>View a stunning selection of original works for sale</h4>
                 </li>
                 <div class="line-devider"></div>
                 <li><a href="../pages/about.html">About Us</a></li>
-                <li><a href="">Diary</a></li>
+                <li>
+                  <a href="../pages/diary.html">Diary</a>
+                  <h4>Past and upcoming showcases</h4>
+                </li>
                 <li><a href="../pages/contact.html">Contact</a></li>
                 <div class="socials-nav">
-                  <i class="fab fa-instagram"></i>
-                  <i class="far fa-envelope"></i>
-                  <i class="fab fa-facebook-square"></i>
+                  <a
+                    href="https://www.instagram.com/cristinavendelsen/?hl=en"
+                    target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href=""><i class="far fa-envelope"></i></a>
+                  <a
+                    href="htt.ps://www.facebook.com/gallericcart"
+                    target="_blank"
+                    ><i class="fab fa-facebook-square"></i
+                  ></a>
                 </div>
               </ul>
             </div>
-
             <div class="sidebarBtn menu-icon">
               <span class="line-1"></span>
               <span class="line-2"></span>
@@ -83,161 +108,172 @@
           </nav>
         </header>
         <main>
-          <div class="bottles-img-main">
-            <h1>CAMELIA CREATIVE</h1>
-            <img src="../img/BANNER IMAGE.png" alt="cats" />
+          <!-- <div class="bottles-img-main">
+            <h1>CRISTINA CREATIVE</h1>
+            <img src="../img/COLLECTION-BANNERS/cats-banner.png" alt="cats" />
             <h2>COLLECTION X</h2>
             <h3>CATS</h3>
-          </div>
-          <div class="single-collection-img-container">
-            <div class="single-collection-item-container">
-              <img src="/img/EDITED PAINTINGS/CATS/CATS1.png" alt="cats" />
-              <div>
-                <h1>CATS DEVINE</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                  voluptatem molestiae omnis accusantium ad ab distinctio vero
-                  laborum dignissimos sint adipisci eaque asperiores quod
-                  veritatis hic, debitis vitae nostrum quasi.Nulla illo ab amet
-                  sint ipsa, non saepe magnam nisi doloribus, dolores dicta, sed
-                  consequuntur. Architecto error nesciunt maxime eveniet. Maxime
-                  illum sed quibusdam suscipit delectus magnam amet veniam
-                  architecto?
-                </p>
+            <div class="banner-img-modal">
+              <div
+                class="single-collection-item-container"
+                data-description="AMANDA"
+              >
+                <h4 class="img-modal">AMANDA</h4>
+                <img src="/img/EDITED PAINTINGS/CATS/CATS2.png" alt="" />
               </div>
-            </div>
-          </div>
-          <div class="single-collection-img-container">
-            <div data-aos="fade-left" class="single-collection-item-container">
-              <img src="/img/EDITED PAINTINGS/CATS/CATS2.png" alt="cats" />
-              <div>
-                <h1>CATS DEVINE</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                  voluptatem molestiae omnis accusantium ad ab distinctio vero
-                  laborum dignissimos sint adipisci eaque asperiores quod
-                  veritatis hic, debitis vitae nostrum quasi.Nulla illo ab amet
-                  sint ipsa, non saepe magnam nisi doloribus, dolores dicta, sed
-                  consequuntur. Architecto error nesciunt maxime eveniet. Maxime
-                  illum sed quibusdam suscipit delectus magnam amet veniam
-                  architecto?
-                </p>
+              <div
+                class="single-collection-item-container"
+                data-description="ANASTASIA"
+              >
+                <h4 class="img-modal">ANASTASIA</h4>
+                <img src="/img/EDITED PAINTINGS/CATS/CATS1.png" alt="" />
               </div>
-            </div>
-          </div>
-          <div class="single-collection-img-container">
-            <div data-aos="fade-right" class="single-collection-item-container">
-              <img src="/img/EDITED PAINTINGS/CATS/CATS3.png" alt="cats" />
-              <div>
-                <h1>CATS DEVINE</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                  voluptatem molestiae omnis accusantium ad ab distinctio vero
-                  laborum dignissimos sint adipisci eaque asperiores quod
-                  veritatis hic, debitis vitae nostrum quasi.Nulla illo ab amet
-                  sint ipsa, non saepe magnam nisi doloribus, dolores dicta, sed
-                  consequuntur. Architecto error nesciunt maxime eveniet. Maxime
-                  illum sed quibusdam suscipit delectus magnam amet veniam
-                  architecto?
-                </p>
+              <div
+                class="single-collection-item-container"
+                data-description="JAKE"
+              >
+                <h4 class="img-modal">JAKE</h4>
+                <img src="/img/EDITED PAINTINGS/CATS/CATS4.png" alt="" />
               </div>
-            </div>
-          </div>
-          <div class="single-collection-img-container">
-            <div data-aos="fade-left" class="single-collection-item-container">
-              <img src="/img/EDITED PAINTINGS/CATS/CATS4.png" alt="cats" />
-              <div>
-                <h1>CATS DEVINE</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                  voluptatem molestiae omnis accusantium ad ab distinctio vero
-                  laborum dignissimos sint adipisci eaque asperiores quod
-                  veritatis hic, debitis vitae nostrum quasi.Nulla illo ab amet
-                  sint ipsa, non saepe magnam nisi doloribus, dolores dicta, sed
-                  consequuntur. Architecto error nesciunt maxime eveniet. Maxime
-                  illum sed quibusdam suscipit delectus magnam amet veniam
-                  architecto?
-                </p>
+              <div
+                class="single-collection-item-container"
+                data-description="FIONA"
+              >
+                <h4 class="img-modal">FIONA</h4>
+                <img src="/img/EDITED PAINTINGS/CATS/CATS3.png" alt="" />
               </div>
-            </div>
-          </div>
-          <!-- <div class="indiv-collectionpage-text text-wrapper">
-            <h1>CC ART GALLERY</h1>
-            <p>
-              Camelia Cristina, founder of CC ART GALLERY was born in the year
-              of 1954 in Bucharest Romania in an artistic family. Her father was
-              a photographer and painter and her uncle painted and wrote
-              calligraphy for multiple bibles in Romanian monasteries. Cristina
-              lived in Germany in the 70’s, in Sweden between 1086 and 1995, and
-              has resided in Norway since 1995 with her husband and daughters.
-            </p>
-            <div class="findoutmore-btn-container">
-              <a href="./pages/about.html">FIND OUT MORE HERE</a>
             </div>
           </div> -->
-          <!-- <ul class="collections text-wrapper">
-            <h1>COLLECTIONS</h1>
+          <div class="collections-page-text text-wrapper">
+            <h2>Cristina Creative</h2>
+            <h1>COLLECTIONS X</h1>
             <p>
-              The CC ART collections combine disparate sources of inspiration
-              and artistic codes, reinterpreting them with a contemporary slant.
-              The aim is to create a design that places as much emphasis on
-              aesthetics as it does on the use and concept of a project.
+              Cristina’s Collections is a new take on the themes of our external
+              reality, evoking a bygone era. It has reinvented new classics for
+              the digital age. Primitive art, brutalist architecture, artist
+              Costantino Nivola’s sand casting technique, raw earth and plastic
+              arts become the starting point for designs with accentuated
+              textures. Basket weaving and wicker chairs, a statement of
+              craftsmanship that peaked in popularity in the 1970s, is combined
+              with marble, textiles, and marbling for a more modern look. Nature
+              makes an appearance through suffused, faint, and fluid landscapes,
+              plants, enormous flowers, and the use of natural wood and stone.
+              The collection experiments with light to create fascinating,
+              changeable reflections and refractions within the spaces.
             </p>
-          </ul> -->
+          </div>
+          <!-- IMG MODAL-->
+          <div class="outer-modal">
+            <div class="inner-modal"></div>
+          </div>
+          <!-- IMG MODAL-->
+          <article class="row">
+            <div class="column" data-aos="fade-up">
+              <div
+                class="single-collection-item-container"
+                data-name="Anastasia"
+                data-description="
+                Year: 1989 <br>
+                Method: Acrylyc<br>
+                Size: 400 x 400<br>
+                Pice: £2000<br>
+                "
+                data-contact="For more information, or to view this painting in person please contact us via the contact button bellow"
+              >
+                <img
+                  class="img-modal"
+                  src="/img/CROPPED-PAINTINGS/CROPPED CATS/Cats4.jpg"
+                  alt="cats"
+                />
+              </div>
+              <div
+                class="single-collection-item-container"
+                data-name="Anastasia"
+                data-description="
+              Year: 1989 <br>
+              Method: Acrylyc<br>
+              Size: 400 x 400<br>
+              Pice: £2000<br>
+              "
+                data-contact="For more information, or to view this painting in person please contact us via the contact button bellow"
+              >
+                <img
+                  class="img-modal"
+                  src="/img/CROPPED-PAINTINGS/CROPPED CATS/Cats2.jpg"
+                  alt="cats"
+                />
+              </div>
+            </div>
+            <div class="column">
+              <div
+                class="single-collection-item-container"
+                data-name="Anastasia"
+                data-description="
+              Year: 1989 <br>
+              Method: Acrylyc<br>
+              Size: 400 x 400<br>
+              Pice: £2000<br>
+              "
+                data-contact="For more information, or to view this painting in person please contact us via the contact button bellow"
+              >
+                <img
+                  class="img-modal"
+                  src="/img/CROPPED-PAINTINGS/CROPPED CATS/cats-whitehead.png"
+                  alt="cats"
+                />
+              </div>
+              <div
+                class="single-collection-item-container"
+                data-name="Anastasia"
+                data-description="
+              Year: 1989 <br>
+              Method: Acrylyc<br>
+              Size: 400 x 400<br>
+              Pice: £2000<br>
+              "
+                data-contact="For more information, or to view this painting in person please contact us via the contact button bellow"
+              >
+                <img
+                  class="img-modal"
+                  src="/img/CROPPED-PAINTINGS/CROPPED CATS/cats-brightyellow.png"
+                  alt="cats"
+                />
+              </div>
+            </div>
+          </article>
+
           <div
             data-aos="fade-up"
             class="findoutmore-btn-container-center text-wrapper"
           >
-            <h1>VIEW ALL CREATIVE COLLECTIONS, COLOUR AND SHADOW</h1>
-            <a href="../pages/collections.html">DISCOVER ALL</a>
+            <h1 data-aos="fade-left">
+              VIEW ALL CREATIVE COLLECTIONS, COLOUR AND SHADOW
+            </h1>
+            <a data-aos="fade-up" href="../pages/collections.html"
+              >DISCOVER ALL</a
+            >
           </div>
 
-          <div class="img-side-right">
-            <h4>PROJECTS</h4>
+          <div data-aos="fade-left" class="img-side-left">
             <img src="../img/LANDSCAPE IMAGE.png" alt="" />
+            <div class="img-border"></div>
+            <h4>PROFESSIONALS</h4>
           </div>
 
-          <!-- <div class="centering-div">
-            <div class="swiper-container s2">
-              <h4 class="tiny-title">PROJECTS</h4>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="overflow">
-                    <img class="zoom-img" src="../img/IMG_3394.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="overflow">
-                    <img class="zoom-img" src="../img/IMG_3510.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="overflow">
-                    <img
-                      class="zoom-img"
-                      src="../img/MVIMG_20191228_130931-01.jpeg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="overflow">
-                    <img class="zoom-img" src="../img/IMG_3394.jpg" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
           <ul class="collections projects text-wrapper">
-            <h1>PROJECTS</h1>
-            <p>
-              Cristina’s range is designed to give rooms a unique and personal
-              look. Because its wallcoverings can be adapted to any size,
-              design, and potential colour, they offer a decorative solution
-              that easily captures the desired look for the project.
-            </p>
-            <div class="explore-container">
-              <a class="line" href="./projects.html"><line>MORE INFO</line></a>
+            <h1 data-aos="fade-left">PROJECTS</h1>
+            <div data-aos="fade-up">
+              <p>
+                Cristina’s range is designed to give rooms a unique and personal
+                look. Because its wallcoverings can be adapted to any size,
+                design, and potential colour, they offer a decorative solution
+                that easily captures the desired look for the project.
+              </p>
+              <div class="explore-container">
+                <a class="line" href="./projects.html"
+                  ><line>MORE INFO</line></a
+                >
+              </div>
             </div>
           </ul>
         </main>
@@ -322,18 +358,28 @@
         </div>
       </footer>
     </main>
-    <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.umd.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/swiper/swiper-bundle.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
       integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
-      crossorigin="anonymous"></script>
-      <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/js.js"></script>
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/aos@2.3.1/dist/aos.js"
+    ></script>
+    <script src="../js.js"></script>
+    <script src="../modal.js"></script>
     <script>
-    AOS.init({
-      offset: 300, // offset (in px) from the original trigger point
-      duration: 700, // values from 0 to 3000, with step 50ms
-      easing: "ease", // default easing for AOS animations
-    });</script>
+      AOS.init({
+        offset: 300, // offset (in px) from the original trigger point
+        duration: 700, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+      });
+    </script>
   </body>
 </html>
