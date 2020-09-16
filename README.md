@@ -12,6 +12,8 @@ ISSUES DISCUSSED IN MEETING:
  - Mobile view image is fine for this. 
  - Make welcome text on landing page responsive with hero image
  
+3. Fix Modal for People collection page 
+ 
 PAGES/SECTIONS TO CURRENTLY FINISH:
 
 1. All individual collection pages ✅
