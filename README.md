@@ -1,4 +1,7 @@
 # Cristinas-website
+
+Work in progress: https://flamboyant-raman-a89f78.netlify.app/pages/collection-bottles.html
+
 ISSUES DISCUSSED IN MEETING:
 
 1. .img-side-left 
