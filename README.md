@@ -10,6 +10,7 @@ ISSUES DISCUSSED IN MEETING:
  
 2. Hero image on landing page does not scale to vieport in desktop view with relevant image.
  - Mobile view image is fine for this. 
+ - Make welcome text on landing page responsive with hero image
  
 PAGES/SECTIONS TO CURRENTLY FINISH:
 
