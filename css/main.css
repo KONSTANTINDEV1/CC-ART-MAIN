@@ -184,7 +184,6 @@ section {
     width: 135px;
     position: relative;
     top: 2px;
-    display: none;
   }
 }
 
@@ -511,7 +510,7 @@ section {
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 900px) {
   .welcome-page-text-container .catch-phrase {
     text-align: left;
     padding: 0 50%;
@@ -1074,7 +1073,7 @@ section {
 }
 
 .slide4 {
-  background-image: url(/img/People7.jpeg);
+  background-image: url(/img/CROPPED-PAINTINGS/CROPPED-PORTRAITS/portrait-cristina2.png);
   background-size: cover;
 }
 
@@ -1622,9 +1621,34 @@ section {
   padding: 20px 0px;
 }
 
+.parallax {
+  min-height: 400px;
+  width: 100vw;
+}
+
 #home .about-text-container {
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  #home .logo-topnav {
+    display: none;
+  }
+}
+
+#home .menu-icon {
+  position: relative;
+  top: 24px;
+}
+
+#home .sticky .logo-topnav {
+  display: block;
+}
+
+#home .sticky .menu-icon {
+  position: relative;
+  top: 0px;
 }
 
 #about-page {
@@ -2460,7 +2484,8 @@ section {
 }
 
 .outer-modal .inner-modal img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 900px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -2469,7 +2494,12 @@ section {
     padding-bottom: 20px;
     padding-right: 0;
     margin-left: 0%;
-    margin-top: 20px;
+  }
+  .outer-modal .inner-modal img {
+    max-height: 720px;
+    max-width: 100%;
+    position: relative;
+    top: 0;
   }
 }
 

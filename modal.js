@@ -27,6 +27,16 @@ function imgHandleClick(e) {
   // document.body.classList.toggle('blur');
 }
 
+// Close Modal
+function closeModal() {
+  outerModal.classList.remove('open');
+}
+
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
 //--- ADD EVENTLISTENER TO ALL IMGS ---//
 document
   .querySelectorAll(".img-modal")
