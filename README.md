@@ -1,4 +1,7 @@
 # Cristinas-website
+
+Work in progress: https://flamboyant-raman-a89f78.netlify.app/pages/collection-bottles.html
+
 ISSUES DISCUSSED IN MEETING:
 
 1. .img-side-left 
@@ -7,12 +10,15 @@ ISSUES DISCUSSED IN MEETING:
  
 2. Hero image on landing page does not scale to vieport in desktop view with relevant image.
  - Mobile view image is fine for this. 
+ - Make welcome text on landing page responsive with hero image
+ 
+3. Fix Modal for People collection page 
  
 PAGES/SECTIONS TO CURRENTLY FINISH:
 
-1. All individual collection pages 
-2. Contact page
-3. Footer
-4. Exhibition/New paintings/On sale pages
+1. All individual collection pages ✅
+2. Contact page ✅
+3. Footer ✅
+4. Exhibition/New paintings/ ✅
 
-5. Collections main page half finished as img links are done. Other half needs finishing
+
