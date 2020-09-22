@@ -484,6 +484,10 @@ section {
       top: -80%;
       left: -10%;
     }
+
+    @media only screen and (max-width: 1600px) {
+      top: -68%;
+    }
     @media only screen and (max-width: 600px) {
       font-size: 2.4rem;
       flex-direction: column;
@@ -1587,6 +1591,21 @@ section {
     padding-top: -70px;
   }
 }
+.socials-contact {
+  padding-bottom: 20px;
+  a {
+    color: black;
+    font-size: 22px;
+    padding-right: 10px;
+    transition: color 0.5s ease;
+    &:hover {
+      color: grey;
+    }
+  }
+  li {
+    color: black;
+  }
+}
 .contact-details-container {
   display: flex;
   justify-content: flex-end;
@@ -1633,6 +1652,9 @@ section {
     a {
       color: inherit;
     }
+    @media only screen and (max-width: 1200px) {
+      width: auto;
+    }
   }
   .googlemaps-container {
     width: 100%;
@@ -1643,6 +1665,8 @@ section {
   }
   @media only screen and (max-width: 1200px) {
     flex-direction: column;
+    margin: 0;
+    margin-bottom: 150px;
   }
 }
 
@@ -2278,7 +2302,7 @@ section {
       padding-bottom: 20px;
       padding-right: 0;
       margin-left: 0%;
-      margin-right:0%;
+      margin-right: 0%;
       // margin-top: 20px;
       // height: 100vh;
       img {
