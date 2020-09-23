@@ -1,11 +1,11 @@
 //--- IMG MODAL ---//
 
 const outerModal = document.querySelector(".outer-modal");
-const innerModal = document.querySelector(".inner-modal");
+const innerModal = document.querySelector(".inner-modal-photos");
 
 function imgHandleClick(e) {
   const imgContainer = e.currentTarget;
-  const img = imgContainer.closest(".single-collection-item-container");
+  const img = imgContainer.closest(".single-photo-item-container");
   const imgSrc = img.querySelector("img").src;
   const Desc = img.dataset.description;
   const Contact = img.dataset.contact;
@@ -13,20 +13,11 @@ function imgHandleClick(e) {
 
   innerModal.innerHTML = `
   <img src="${imgSrc}" alt="${Desc}"/>
-  <div class="modal-text">
-  <h2>${Name}</h2>
-  <div>
-  <p class="painting-desc">${Desc}</p>
-  </div>
-  <p>${Contact}</p>
-
-  <li><a href="/pages/contact.html">CONTACT US</a></li>
-  </div>
   `;
   outerModal.classList.toggle("open");
-  console.log(innerModal);
-
+  
 }
+console.log(innerModal);
 
 // Close Modal
 function closeModal() {
@@ -45,7 +36,7 @@ document
 
 //--- CLOSE MODAL WHEN CLICKING OUT OF IMG ---//
 outerModal.addEventListener("click", function (e) {
-  const isOutside = !e.target.closest(".inner-modal");
+  const isOutside = !e.target.closest(".inner-modal-photos");
   if (isOutside) {
     outerModal.classList.remove("open");
   }

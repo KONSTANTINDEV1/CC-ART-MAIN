@@ -1,11 +1,3 @@
-// //--- SMOOTH SCROLL BAR ---//
-
-// import Scrollbar from "smooth-scrollbar";
-
-// var options = {
-//   daping: 0.2,
-// };
-// Scrollbar.init(document.querySelector("#my-scrollbar", options));
 //--- MENU BUTTON ---//
 const menuIcon = document.querySelector(".menu-icon");
 
@@ -40,9 +32,11 @@ tl.fromTo(
 
 gsap.from(".row", { opacity: 0,delay:0.5, duration: 1.2, y: 60 });
 gsap.from(".collections-wrapper", { opacity: 0, duration: 1.2, y: 60 });
+gsap.from(".projects-container", { opacity: 0, duration: 1.2, y: 60 });
 gsap.from(".collections-page-text", { opacity: 0, duration: 1.2, x: 60 });
 gsap.from(".desktop-nav-links", { opacity: 0,delay:0.5, duration: 1.2, x: 60 });
 gsap.from(".logo-topnav", { opacity: 0,delay:0.5, duration: 1.5, x: -60, });
+
 
 
 
