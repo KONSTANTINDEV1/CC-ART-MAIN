@@ -695,6 +695,11 @@ section {
   font-family: "Montserrat";
 }
 
+.press-text h1 {
+  font-family: "Lato";
+  font-weight: 700;
+}
+
 .findoutmore-btn-container {
   width: 100vw;
 }
@@ -718,7 +723,7 @@ section {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   color: inherit;
-  transition: color 0.5s;
+  transition: all 0.5s ease;
 }
 
 .findoutmore-btn-container a:hover {
@@ -815,7 +820,7 @@ section {
   .img-side-left h4 {
     font-size: 12px;
     top: 23%;
-    right: -34%;
+    right: -37%;
   }
 }
 
@@ -1202,7 +1207,6 @@ section {
 
 @media only screen and (min-width: 900px) {
   .s1 h1 {
-    max-width: 200px;
     font-size: 30px;
     font-weight: 700;
   }
@@ -1816,6 +1820,7 @@ section {
   justify-content: flex-end;
   padding: 0 10%;
   margin: 150px 0;
+  margin-top: 50px;
   width: 100%;
 }
 
@@ -2279,6 +2284,7 @@ section {
   .column2 {
     flex: 100%;
     padding: 0;
+    padding-bottom: 150px;
   }
 }
 

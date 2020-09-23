@@ -110,6 +110,9 @@
           </nav>
         </header>
         <main>
+          <div class="outer-modal">
+            <div class="inner-modal-photos"></div>
+          </div>
           <div class="gallery-img-container">
             <img src="../CCARTGALLERYPHOTOS/Green Gallery main.JPG" alt="" />
           </div>
@@ -164,25 +167,27 @@
               <h1>PRESS WITH CRISTINA</h1>
               <p>
                 Cristina has also been interviewed and visited by the local news
+                paper to find out about her art works ever growing popularity in
+                a number of countries.
               </p>
-              <p>
-                Cristina’s passion is painting, mostly with acryl colours,
-                though she also enjoys aquarelle and oil painting. She has
-                participated in a plentitude of painting courses, some led by
-                Annhild Brit Gustavsen, and she is constantly developing and
-                perfecting her own painting style and techniques. She has also
-                participated in a course led by the university lecturer Marina
-                Stan at Høyskolen in Oslo and Akershus (now the Oslo
-                Metropolitan University), under the Icelandic artist Karl Austan
-                Vernhardsson, and she is now finishing her two year art
-                education at Nydalen Kunstskole in Oslo. "The human soul on
-                canvas" This was the title of a local newspaper article about
-                Cristina and her art. In short, it describes very well what she
-                tries to express in her paintings.
-              </p>
+              <div class="explore-container">
+                <a
+                  class="line"
+                  target="_blank"
+                  href="https://www.raumnes.no/nyheter/cristina-inviterer-til-kunst-utstilling-i-nes-naeringspark/"
+                >
+                  <line>EXPLORE</line>
+                </a>
+              </div>
             </div>
             <div class="column2">
-              <img src="../img/press/IMG_20200904_160223.jpg" alt="" />
+              <div class="single-photo-item-container">
+                <img
+                  class="img-modal"
+                  src="../img/press/IMG_20200904_160223.jpg"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
 
@@ -196,12 +201,6 @@
               <div class="swiper-slide slide1">
                 <h1>NEWEST PAINTINGS</h1>
                 <a href="/pages/newpaintings.html"
-                  ><div class="discover-more">DISCOVER MORE</div></a
-                >
-              </div>
-              <div class="swiper-slide slide2">
-                <h1>EXHIBITION WORK</h1>
-                <a href="/pages/exhibitionwork.html"
                   ><div class="discover-more">DISCOVER MORE</div></a
                 >
               </div>
@@ -424,5 +423,6 @@
         easing: "ease", // default easing for AOS animations
       });
     </script>
+    <script src="/photosmodal.js"></script>
   </body>
 </html>

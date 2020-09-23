@@ -11,7 +11,7 @@ window.addEventListener("scroll", function () {
   var header = document.querySelector(".navbar");
   header.classList.toggle("sticky", window.scrollY > 800);
 });
-
+$(window).scrollTop(0);
 //--- SIDENAV ---//
 $(document).ready(function () {
   $(".sidebarBtn").click(function () {

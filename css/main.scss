@@ -637,6 +637,10 @@ section {
 .press-text {
   line-height: 1.7;
   font-size: 15;
+  h1 {
+    font-family: "Lato";
+    font-weight: 700;
+  }
   font-family: "Montserrat";
 }
 .findoutmore-btn-container {
@@ -659,7 +663,7 @@ section {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     color: inherit;
-    transition: color 0.5s;
+    transition: all 0.5s ease;
     // -webkit-font-smoothing: antialiased;
     &:hover {
       background-color: black;
@@ -753,7 +757,7 @@ section {
     h4 {
       font-size: 12px;
       top: 23%;
-      right: -34%;
+      right: -37%;
     }
     // margin: -40px 0px;
   }
@@ -1086,7 +1090,7 @@ section {
 @media only screen and (min-width: 900px) {
   .s1 {
     h1 {
-      max-width: 200px;
+      // max-width: 200px;
       font-size: 30px;
       font-weight: 700;
     }
@@ -1671,6 +1675,7 @@ section {
   justify-content: flex-end;
   padding: 0 10%;
   margin: 150px 0;
+  margin-top: 50px;
   width: 100%;
   .contact-details {
     display: flex;
@@ -2067,6 +2072,7 @@ section {
   @media only screen and (max-width: 600px) {
     flex: 100%;
     padding: 0;
+    padding-bottom: 150px;
   }
 }
 
@@ -2388,7 +2394,7 @@ section {
   transform: translateY(200px);
   transition: 0.5s ease;
   opacity: 0;
-margin: 0 auto;
+  margin: 0 auto;
   pointer-events: none;
   img {
     max-width: 100%;
@@ -2417,7 +2423,7 @@ margin: 0 auto;
   justify-content: center;
 }
 
-.outer-modal.open .inner-modal-photos  {
+.outer-modal.open .inner-modal-photos {
   display: flex;
   opacity: 1;
   transform: translateY(0px);
