@@ -1521,13 +1521,16 @@ section {
     flex-direction: column;
   }
   .logo-topnav {
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 700px) {
       display: none;
     }
   }
   .menu-icon {
     position: relative;
-    top: 24px;
+
+    @media only screen and (max-width:700px){
+      top: 24px;
+    }
   }
   .sticky {
     .logo-topnav {
