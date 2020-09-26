@@ -76,6 +76,12 @@ var swiper = new Swiper(".s1", {
       spaceBetween: 40,
       autoResize: true,
     },
+    // when window width is >= 640px
+    700: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      autoResize: true,
+    },
   },
 });
 
@@ -104,7 +110,7 @@ var swiper2 = new Swiper(".s2", {
     },
     // when window width is >= 640px
     760: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 40,
       autoResize: true,
     },
