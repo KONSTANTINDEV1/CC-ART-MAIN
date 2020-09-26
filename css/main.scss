@@ -1424,7 +1424,7 @@ section {
     width: 100%;
     justify-content: center;
   }
-  
+
   @media only screen and (max-width: 480px) {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
@@ -1488,7 +1488,7 @@ section {
   h2 {
     font-family: var(--lrgtitle-font-family);
     color: white;
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 3px;
     padding-bottom: 20px;
   }
@@ -2397,7 +2397,7 @@ section {
     margin-right: 10%;
     img {
       max-width: 100%;
-      max-height: 900px;
+      max-height: 600px;
     }
     @media only screen and (max-width: 900px) {
       flex-direction: column;
@@ -2405,6 +2405,20 @@ section {
       padding-right: 0;
       margin-left: 0%;
       margin-right: 0%;
+      // margin-top: 20px;
+      // height: 100vh;
+      img {
+        max-height: 720px;
+        max-width: 100%;
+        position: relative;
+        top: 0;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+      padding-right: 0;
+      margin-left: 8%;
+      margin-right: 8%;
       // margin-top: 20px;
       // height: 100vh;
       img {
@@ -2450,6 +2464,7 @@ section {
       top: 0;
     }
   }
+  
 }
 
 .outer-modal.open {
@@ -2468,7 +2483,16 @@ section {
   display: flex;
   opacity: 1;
   transform: translateY(0px);
-
+  .modal-img-container {
+    width: 100%;
+    img{
+      width: 100%;
+    }
+    @media only screen and (max-width:480px){
+      max-height: 400px;
+      overflow: hidden;
+    }
+  }
   .modal-text {
     width: 100%;
     padding: 20px;
@@ -2530,6 +2554,19 @@ section {
 
       li a {
         font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      h2 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      li a {
+        font-size: 13px;
       }
     }
   }

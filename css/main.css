@@ -1625,7 +1625,7 @@ section {
 .email-us-container h2 {
   font-family: var(--lrgtitle-font-family);
   color: white;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 3px;
   padding-bottom: 20px;
 }
@@ -2647,7 +2647,7 @@ section {
 
 .outer-modal .inner-modal img {
   max-width: 100%;
-  max-height: 900px;
+  max-height: 600px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -2657,6 +2657,21 @@ section {
     padding-right: 0;
     margin-left: 0%;
     margin-right: 0%;
+  }
+  .outer-modal .inner-modal img {
+    max-height: 720px;
+    max-width: 100%;
+    position: relative;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .outer-modal .inner-modal {
+    flex-direction: column;
+    padding-right: 0;
+    margin-left: 8%;
+    margin-right: 8%;
   }
   .outer-modal .inner-modal img {
     max-height: 720px;
@@ -2723,6 +2738,21 @@ section {
   transform: translateY(0px);
 }
 
+.outer-modal.open .inner-modal .modal-img-container {
+  width: 100%;
+}
+
+.outer-modal.open .inner-modal .modal-img-container img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .outer-modal.open .inner-modal .modal-img-container {
+    max-height: 400px;
+    overflow: hidden;
+  }
+}
+
 .outer-modal.open .inner-modal .modal-text {
   width: 100%;
   padding: 20px;
@@ -2786,6 +2816,18 @@ section {
   }
   .outer-modal.open .inner-modal .modal-text li a {
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .outer-modal.open .inner-modal .modal-text h2 {
+    font-size: 14px;
+  }
+  .outer-modal.open .inner-modal .modal-text p {
+    font-size: 12px;
+  }
+  .outer-modal.open .inner-modal .modal-text li a {
+    font-size: 13px;
   }
 }
 

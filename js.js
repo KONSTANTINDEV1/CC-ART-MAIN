@@ -34,7 +34,14 @@ gsap.from(".row", { opacity: 0,delay:0.5, duration: 1.2, y: 60 });
 gsap.from(".collections-wrapper", { opacity: 0, duration: 1.2, y: 60 });
 gsap.from(".projects-container", { opacity: 0, duration: 1.2, y: 60 });
 gsap.from(".collections-page-text", { opacity: 0, duration: 1.2, x: 60 });
-gsap.from(".desktop-nav-links", { opacity: 0,delay:0.5, duration: 1.2, x: 60 });
+
+gsap.from(".navlinks-1", { opacity: 0,delay:0.5, duration: 1.2, x: 60 });
+gsap.from(".navlinks-2", { opacity: 0,delay:0.8, duration: 1.2, x: 60 });
+gsap.from(".navlinks-3", { opacity: 0,delay:1, duration: 1.2, x: 60 });
+gsap.from(".navlinks-4", { opacity: 0,delay:1.1, duration: 1.2, x: 60 });
+gsap.from(".navlinks-5", { opacity: 0,delay:1.2, duration: 1.2, x: 60 });
+gsap.from(".navlinks-6", { opacity: 0,delay:1.3, duration: 1.2, x: 60 });
+gsap.from(".navlinks-7", { opacity: 0,delay:1.4, duration: 1.2, x: 60 });
 gsap.from(".logo-topnav", { opacity: 0,delay:0.5, duration: 1.5, x: -60, });
 
 

@@ -12,29 +12,34 @@ function imgHandleClick(e) {
   const Name = img.dataset.name;
 
   innerModal.innerHTML = `
+  <div class="modal-img-container">
   <img src="${imgSrc}" alt="${Desc}"/>
+  </div>
   <div class="modal-text">
+  <div class="painting-desc-container">
   <h2>${Name}</h2>
-  <div>
   <p class="painting-desc">${Desc}</p>
   </div>
-  <p>${Contact}</p>
+
+  <div class="painting-contact-container">
 
   <li><a href="/pages/contact.html">CONTACT US</a></li>
   </div>
+
+  </div>
+  
   `;
   outerModal.classList.toggle("open");
   console.log(innerModal);
-
 }
 
 // Close Modal
 function closeModal() {
-  outerModal.classList.remove('open');
+  outerModal.classList.remove("open");
 }
 
-window.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
     closeModal();
   }
 });
@@ -50,4 +55,3 @@ outerModal.addEventListener("click", function (e) {
     outerModal.classList.remove("open");
   }
 });
-
