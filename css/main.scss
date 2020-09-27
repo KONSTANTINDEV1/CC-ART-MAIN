@@ -28,7 +28,6 @@ body {
   min-width: 100vw;
   scroll-behavior: smooth;
   overflow-x: hidden;
-
 }
 
 ::-webkit-scrollbar {
@@ -103,7 +102,7 @@ section {
         z-index: -1;
         display: flex;
         flex-direction: column;
-        width: 15%;
+        width: 18%;
         background-color: white;
         padding: 10px 0;
         padding-bottom: 10px;
@@ -858,12 +857,12 @@ section {
   @media only screen and (min-width: 1200px) {
     margin-top: -60px;
   }
-      @media only screen and (max-width: 1200px) {
-        margin-top: -50px;
-      }
-      @media only screen and (max-width: 800px) {
-        margin-top: -38px;
-      }
+  @media only screen and (max-width: 1200px) {
+    margin-top: -50px;
+  }
+  @media only screen and (max-width: 800px) {
+    margin-top: -38px;
+  }
   @media only screen and (max-width: 320px) {
     margin-top: -10px;
   }
@@ -1373,7 +1372,6 @@ section {
       padding-top: 50px;
     }
   }
- 
 }
 
 .footer-grid-container {
@@ -1969,7 +1967,6 @@ section {
     padding: 0% 5%;
     padding-bottom: 0px;
   }
-  
 
   .collection-items {
     position: relative;
@@ -2464,7 +2461,6 @@ section {
       top: 0;
     }
   }
-  
 }
 
 .outer-modal.open {
@@ -2485,10 +2481,10 @@ section {
   transform: translateY(0px);
   .modal-img-container {
     width: 100%;
-    img{
+    img {
       width: 100%;
     }
-    @media only screen and (max-width:480px){
+    @media only screen and (max-width: 480px) {
       max-height: 400px;
       overflow: hidden;
     }
